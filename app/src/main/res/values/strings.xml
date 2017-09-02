@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">FundooPay</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="Set_your_location">Set your location</string>
+    <string name="text_location">so that customers can find you \n easily</string>
+    <string name="locate_me">Locate Me</string>
+    <string name="google_maps_api_key">AIzaSyDfo7T9WXvxVynWJsYPCLOoU5NXRl13SR8</string>
+    <string name="title_activity_maps">Map</string>
+    <string name="Avenir">Avenir</string>
+    <string name="bauhaus_93">Bauhaus_93</string>
+</resources>

@@ -1,0 +1,122 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fundoopay.fundoopay.ServiceFragment">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/fundoopayimage" />
+    <RelativeLayout
+        android:id="@+id/layoutFundooPay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_50dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewFundoo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fundoo"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="@dimen/dimen_30sp"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/textViewFundoo"
+            android:text="Pay"
+            android:textColor="@color/holo_yellow_dark"
+            android:textSize="@dimen/dimen_30sp"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:background="@android:color/black"
+            android:alpha="0.5"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/holo_white_dark"
+                android:text="Username"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@android:color/black"
+            android:alpha="0.5">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/holo_white_dark"
+                android:text="Shop Name"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@android:color/black"
+            android:alpha="0.5">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/holo_white_dark"
+                android:text="Service Type"/>
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@android:color/black"
+            android:alpha="0.5">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:textColor="@color/holo_white_dark"
+                android:text="Payment Frequency"
+                android:layout_height="wrap_content" />
+        </android.support.design.widget.TextInputLayout>
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:fontFamily="@string/Avenir"
+        android:text="Next"
+        android:textAlignment="center"
+        android:textColor="@color/holo_white_dark"
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold" />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_toRightOf="@+id/textViewNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        app:srcCompat="@drawable/ic_action_next"/>
+</RelativeLayout>
