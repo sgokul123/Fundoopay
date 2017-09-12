@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.fundoopay.fundoopay.ServiceFragment">
+    tools:context="com.fundoopay.fundoopay.view.ServiceFragment">
 
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="match_parent"
@@ -18,18 +18,19 @@
         android:layout_marginTop="@dimen/dimen_50dp">
 
         <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/textViewFundoo"
+            android:id="@+id/textFundoo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Fundoo"
+            android:text="fundoo"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_30sp"
             android:textStyle="bold" />
 
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textPay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_toRightOf="@+id/textViewFundoo"
+            android:layout_toRightOf="@+id/textFundoo"
             android:text="Pay"
             android:textColor="@color/holo_yellow_dark"
             android:textSize="@dimen/dimen_30sp"
@@ -37,6 +38,7 @@
 
     </RelativeLayout>
     <LinearLayout
+        android:id="@+id/linearLayoutService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -52,10 +54,12 @@
             android:layout_height="wrap_content">
 
             <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:fontFamily="@string/Avenir"
                 android:textColor="@color/holo_white_dark"
-                android:text="Username"/>
+                android:hint="Username"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -66,10 +70,11 @@
             android:alpha="0.5">
 
             <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextShopName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:textColor="@color/holo_white_dark"
-                android:text="Shop Name"/>
+                android:hint="Shop Name"/>
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
@@ -79,33 +84,23 @@
             android:background="@android:color/black"
             android:alpha="0.5">
 
-            <android.support.v7.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textColor="@color/holo_white_dark"
-                android:text="Service Type"/>
-        </android.support.design.widget.TextInputLayout>
-
-        <android.support.design.widget.TextInputLayout
+        <Spinner
+            android:id="@+id/spinner1"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            android:background="@android:color/black"
-            android:alpha="0.5">
+            android:layout_height="@dimen/dimen_50dp">
 
-            <android.support.v7.widget.AppCompatEditText
-                android:layout_width="match_parent"
-                android:textColor="@color/holo_white_dark"
-                android:text="Payment Frequency"
-                android:layout_height="wrap_content" />
+
+        </Spinner>
         </android.support.design.widget.TextInputLayout>
+>
     </LinearLayout>
     <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/textViewNext"
+        android:id="@+id/serviceNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_marginBottom="@dimen/dimen_30dp"
         android:fontFamily="@string/Avenir"
         android:text="Next"
         android:textAlignment="center"
@@ -113,10 +108,10 @@
         android:textSize="@dimen/dimen_14sp"
         android:textStyle="bold" />
     <android.support.v7.widget.AppCompatImageView
-        android:layout_toRightOf="@+id/textViewNext"
+        android:layout_toRightOf="@+id/serviceNext"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_action_next"/>
 </RelativeLayout>

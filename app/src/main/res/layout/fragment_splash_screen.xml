@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.fundoopay.fundoopay.SplashScreenFragment">
+    tools:context="com.fundoopay.fundoopay.view.SplashScreenFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -11,14 +11,11 @@
         android:alpha="0.99"
         android:background="@color/holo_blue_dark">
 
-
-
         <android.support.v7.widget.AppCompatImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            app:srcCompat="@drawable/fundoopayimage"
             android:scaleType="fitXY"
-          />
+            app:srcCompat="@drawable/fundoopayimage" />
 
         <RelativeLayout
             android:id="@+id/layoutFundooPay"
@@ -31,12 +28,13 @@
                 android:id="@+id/textViewFundoo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Fundoo"
+                android:text="fundoo"
                 android:textColor="@color/holo_white_dark"
                 android:textSize="@dimen/dimen_30sp"
                 android:textStyle="bold" />
 
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewPay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/textViewFundoo"
@@ -46,17 +44,18 @@
                 android:textStyle="bold" />
 
         </RelativeLayout>
+
         <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewSplash"
             android:layout_width="wrap_content"
-            android:layout_centerHorizontal="true"
             android:layout_height="wrap_content"
-            android:textColor="@color/holo_white_dark"
-            android:textSize="@dimen/dimen_18sp"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/dimen_50dp"
-            android:textAlignment="center"
             android:text="Easiest way to manage your \n daily expences"
-            />
+            android:textAlignment="center"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="@dimen/dimen_18sp" />
     </RelativeLayout>
 
 </FrameLayout>

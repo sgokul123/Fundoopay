@@ -1,4 +1,4 @@
-package com.fundoopay.fundoopay;
+package com.fundoopay.fundoopay.addaccount;
 
 import android.content.Context;
 import android.net.Uri;
@@ -8,13 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class ServiceFragment extends Fragment {
-     public ServiceFragment() {
+import com.fundoopay.fundoopay.R;
 
+public class AddAccountFragment extends Fragment {
+
+    public AddAccountFragment() {
+        // Required empty public constructor
     }
 
-   public static ServiceFragment newInstance(String param1, String param2) {
-        ServiceFragment fragment = new ServiceFragment();
+
+    public static AddAccountFragment newInstance(String param1, String param2) {
+        AddAccountFragment fragment = new AddAccountFragment();
         Bundle args = new Bundle();
        fragment.setArguments(args);
         return fragment;
@@ -24,11 +28,8 @@ public class ServiceFragment extends Fragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
-        View view=inflater.inflate(R.layout.fragment_, container, false);
-
-
-
-        return view;
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_add_account, container, false);
     }
 
 }

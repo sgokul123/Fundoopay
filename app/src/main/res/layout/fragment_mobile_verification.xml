@@ -1,10 +1,112 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/holo_blue_dark"
-    tools:context="com.fundoopay.fundoopay.MobileVerificationFragment">
+    tools:context="com.fundoopay.fundoopay.view.MobileVerificationFragment">
+5
+    <LinearLayout
+        android:id="@+id/linearLayoutVerify"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:textSize="@dimen/dimen_30sp"
+            android:textAlignment="center"
+            android:textColor="@color/holo_white_dark"
+            android:layout_marginBottom="@dimen/dimen_40dp"
+            android:text="Allow us to access"/>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_50dp"
+            android:orientation="horizontal">
+
+            <Switch
+                android:id="@+id/imageviewOnOffSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
+
+            <LinearLayout
+                android:layout_toRightOf="@+id/imageviewOnOffSms"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/holo_white_dark"
+                    android:text="SMS"/>
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/holo_white_dark"
+                    android:text="To securly verify mobile number"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/dimen_50dp"
+
+            android:layout_marginTop="@dimen/dimen_10dp">
+            <Switch
+                android:id="@+id/imageviewOnOffState"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                />
 
 
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/imageviewOnOffState"
+                android:orientation="vertical">
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/holo_white_dark"
+                    android:text="PHONE STATE"
+                    />
+                <android.support.v7.widget.AppCompatTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/holo_white_dark"
+                    android:text="To securly verify phone with UPI"
+                    />
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_alignParentBottom="true"
+        android:id="@+id/mobileVerifyeNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fontFamily="@string/Avenir"
+        android:text="Next"
+        android:textAlignment="center"
+        android:layout_marginBottom="@dimen/dimen_30dp"
+        android:textColor="@color/holo_white_dark"
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold" />
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_toRightOf="@+id/mobileVerifyeNext"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/ic_action_next"/>
 </RelativeLayout>

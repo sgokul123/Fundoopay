@@ -10,4 +10,6 @@
     <string name="title_activity_maps">Map</string>
     <string name="Avenir">Avenir</string>
     <string name="bauhaus_93">Bauhaus_93</string>
+    <string name="phone_verification">We will send an SMS from your phone \n to verify if your phone number is \n registered with your bank account.</string>
+    <string name="transition_title_image">transition</string>
 </resources>

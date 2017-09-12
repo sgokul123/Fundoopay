@@ -1,0 +1,94 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/holo_blue_dark"
+    tools:context="com.fundoopay.fundoopay.view.VerifyFragment">
+    <RelativeLayout
+        android:id="@+id/relativeOtp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewOTP"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="OTP"
+        android:textAlignment="center"
+        android:textSize="@dimen/dimen_30sp"
+        android:textColor="@color/holo_white_dark"
+        android:layout_centerVertical="true"/>
+    <LinearLayout
+        android:id="@+id/linearLayoutVerify1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_30dp"
+        android:layout_below="@+id/textViewOTP"
+        android:orientation="horizontal">
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="@dimen/dimen_30dp"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:textColor="@color/holo_white_dark"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="@dimen/dimen_30dp"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="@dimen/dimen_30dp"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_height="wrap_content" />
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="@dimen/dimen_30dp"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_marginLeft="@dimen/dimen_20dp"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewVerify"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_18sp"
+        android:textColor="@color/holo_white_dark"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_below="@+id/linearLayoutVerify1"
+        android:textAlignment="center"
+        android:text="Verify"/>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/relativeVerify"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:visibility="gone"
+      >
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageVerify"
+            android:layout_centerVertical="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-100dp"
+            app:srcCompat="@drawable/imageverify"
+            />
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageVerify"
+            android:textSize="@dimen/dimen_30sp"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"
+            android:textColor="@color/holo_white_dark"
+            android:text="Verified \n Successfully"/>
+    </RelativeLayout>
+
+</RelativeLayout>

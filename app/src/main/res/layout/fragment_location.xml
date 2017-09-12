@@ -7,110 +7,100 @@
     android:background="@color/holo_blue_dark"
     android:orientation="vertical">
 
-    <ScrollView
+    <LinearLayout
+        android:id="@+id/linearLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scrollbars="none"
-        >
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/linearLayout2"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Set_your_location"
+            android:textAlignment="center"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="30dp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/text_location"
+            android:textAlignment="center"
+            android:textColor="@color/holo_white_dark"
+            android:textSize="@dimen/dimen_18sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="-50dp"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewLacation"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dimen_100dp"
+            android:layout_below="@+id/linearLayout"
+            android:layout_marginTop="@dimen/dimen_100dp"
+            android:transitionName="@string/transition_title_image"
+            app:srcCompat="@drawable/ic_action_location" />
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
-
-            <LinearLayout
-                android:id="@+id/linearLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="150dp"
-
-                android:orientation="vertical">
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="@string/Set_your_location"
-                    android:textAlignment="center"
-                    android:textColor="@color/holo_white_dark"
-                    android:textSize="30dp" />
-
-                <TextView
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="@dimen/dimen_10dp"
-                    android:text="@string/text_location"
-                    android:textAlignment="center"
-                    android:textColor="@color/holo_white_dark"
-                    android:textSize="@dimen/dimen_18sp" />
-
-            </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/linearLayout2"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/linearLayout"
-                android:orientation="vertical">
-
-                <android.support.v7.widget.AppCompatImageView
-                    android:id="@+id/imageViewLacation"
-                    android:layout_width="match_parent"
-                    android:layout_height="@dimen/dimen_100dp"
-                    android:layout_below="@+id/linearLayout"
-                    android:layout_marginTop="@dimen/dimen_20dp"
-                    app:srcCompat="@drawable/ic_action_location" />
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginBottom="@dimen/dimen_40dp"
-                    android:layout_below="@+id/imageViewLacation">
-
-                    <android.support.v7.widget.AppCompatTextView
-                        android:id="@+id/textViweLocateMe"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginTop="@dimen/dimen_20dp"
-                        android:text="@string/locate_me"
-                        android:textAlignment="center"
-                        android:textColor="@color/holo_white_dark"
-                        android:textSize="@dimen/dimen_18sp" />
-
-                    <android.support.v7.widget.AppCompatEditText
-                        android:id="@+id/editTextLocateMe"
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="@dimen/dimen_20dp"
-                        android:layout_marginRight="@dimen/dimen_20dp"
-                        android:layout_marginTop="@dimen/dimen_10dp"
-                        android:hint="@string/locate_me"
-                        android:maxLines="4"
-                        android:textColor="@color/holo_white_dark"
-                        android:textSize="@dimen/dimen_18sp"
-                        android:visibility="gone" />
-                </RelativeLayout>
-            </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/imageViewLacation"
+            android:layout_marginBottom="@dimen/dimen_40dp">
 
             <android.support.v7.widget.AppCompatTextView
-                android:id="@+id/textViewNext"
-                android:layout_width="wrap_content"
+                android:id="@+id/textViweLocateMe"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/linearLayout2"
-                android:layout_centerInParent="true"
-                android:layout_marginTop="@dimen/dimen_10dp"
-                android:fontFamily="@string/Avenir"
-                android:text="Next"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:text="@string/locate_me"
                 android:textAlignment="center"
                 android:textColor="@color/holo_white_dark"
-                android:textSize="@dimen/dimen_14sp"
-                android:textStyle="bold" />
-            <android.support.v7.widget.AppCompatImageView
-                android:layout_toRightOf="@+id/textViewNext"
-                android:layout_width="wrap_content"
+                android:textSize="@dimen/dimen_18sp" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextLocateMe"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/dimen_5dp"
-                android:layout_below="@+id/linearLayout2"
-                app:srcCompat="@drawable/ic_action_next"/>
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:hint="@string/locate_me"
+                android:maxLines="4"
+                android:textColor="@color/holo_white_dark"
+                android:textSize="@dimen/dimen_18sp"
+                android:visibility="gone" />
         </RelativeLayout>
-    </ScrollView>
+    </LinearLayout>
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/dimen_30dp"
+        android:fontFamily="@string/Avenir"
+        android:text="Next"
+        android:textAlignment="center"
+        android:textColor="@color/holo_white_dark"
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_toRightOf="@+id/textViewNext"
+        app:srcCompat="@drawable/ic_action_next" />
 </RelativeLayout>
 

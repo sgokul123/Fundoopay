@@ -1,15 +1,17 @@
-package com.fundoopay.fundoopay;
+package com.fundoopay.fundoopay.view;
 
+import android.app.Activity;
 import android.os.Bundle;
+import android.support.v4.app.ActivityCompat;
+import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v7.widget.AppCompatEditText;
 import android.support.v7.widget.AppCompatImageView;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.FrameLayout;
-import android.widget.Toast;
 
+import com.fundoopay.fundoopay.R;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -65,7 +67,11 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
             case R.id.imageViewLacation:
                  PlacePicker.IntentBuilder builder = new PlacePicker.IntentBuilder();
                 try {
-                    getActivity().startActivityForResult(builder.build(getActivity()),locationInterface.PLACE_PICKER_REQUEST);
+                    String transitionName =getActivity().getString(R.string.transition_title_image);
+                    ActivityOptionsCompat options = ActivityOptionsCompat.makeSceneTransitionAnimation((Activity) getActivity(), imageViewMap,transitionName);
+                    ActivityCompat.startActivity((Activity)getActivity(), builder.build(getActivity()), options.toBundle());
+
+                    //getActivity().startActivityForResult(builder.build(getActivity()),locationInterface.PLACE_PICKER_REQUEST);
                 } catch (GooglePlayServicesRepairableException e) {
                     e.printStackTrace();
                 } catch (GooglePlayServicesNotAvailableException e) {

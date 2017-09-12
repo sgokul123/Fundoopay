@@ -1,4 +1,4 @@
-package com.fundoopay.fundoopay;
+package com.fundoopay.fundoopay.view;
 
 import android.support.v4.app.Fragment;
 import android.view.View;
