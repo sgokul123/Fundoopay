@@ -1,4 +1,4 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

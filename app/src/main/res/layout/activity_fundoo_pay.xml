@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_white"
+    tools:context="com.fundoopay.fundoopay.dashboard.view.FundooPayActivity">
+
+    <include
+        android:id="@+id/include_first"
+        layout="@layout/tool_bar_dashboard_layout" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDash1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@+id/include_first"
+        android:weightSum="1">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButton1"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="0.43"
+            android:layout_width="match_parent"
+            android:background="@drawable/tab_layout_secound"
+            android:fontFamily="@string/Avenir"
+            android:text="Outstanding Bills"
+            style="?android:attr/borderlessButtonStyle"
+            />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/appCompatButton2"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="-50dp"
+            android:layout_weight="0.57"
+            android:background="@drawable/tab_layout_one"
+            android:fontFamily="@string/Avenir"
+            android:text="   Oustanding Amounts"
+            style="?android:attr/borderlessButtonStyle"
+            />
+    </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/recyclerViewDashBoard"
+            android:layout_below="@+id/linearLayoutDash1"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            />
+
+
+
+</RelativeLayout>

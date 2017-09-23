@@ -23,7 +23,7 @@
             android:value="AIzaSyAudabhObn18srVvjLrB6T6tog6rk3GufQ" />
 
         <activity
-            android:name=".view.MainActivity"
+            android:name=".home.view.MainActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -31,8 +31,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".bankdetail.view.BankDetailActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"></activity>
+        <activity
+            android:name=".bankdetail.view.BankDetailActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar" />
+        <activity android:name=".dashboard.view.FundooPayActivity"
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

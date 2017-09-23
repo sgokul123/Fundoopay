@@ -1,0 +1,232 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_white"
+    tools:context="com.fundoopay.fundoopay.addaccount.SetUPIFragment">
+
+    <include layout="@layout/layout_toolbar_upi" />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutUpiPin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Last 6 digits of your debit card number"
+            android:textAlignment="center"
+            android:textColor="@color/holo_blue_dark" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDCardNumber1"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDCardNumber2"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:maxLength="1"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDCardNumber3"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textAlignment="center"
+                android:maxLength="1"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDCardNumber4"
+                android:layout_width="@dimen/dimen_30dp"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDCardNumber5"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextDCardNumber6"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+        </LinearLayout>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:text="Validity of card"
+            android:textColor="@color/holo_blue_dark" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:orientation="horizontal">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextValidity1"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextValidity2"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/dimen_30sp"
+                android:layout_marginTop="@dimen/dimen_5dp"
+                android:text="/" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextValidity3"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextValidity4"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:textAlignment="center"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+        </LinearLayout>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearLayoutUpiPin2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:visibility="gone">
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/holo_blue_dark"
+            android:textAlignment="center"
+            android:text="Set 4 digit UPI PIN"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUpiPin1"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUpiPin2"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUpiPin3"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUpiPin4"
+                android:layout_width="@dimen/dimen_30dp"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+
+        </LinearLayout>
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/relativeUpiPin"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dimen_50dp"
+        android:layout_alignParentBottom="true" >
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewUpiPinNext"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@string/Avenir"
+        android:text="Next"
+        android:layout_marginTop="@dimen/dimen_5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_centerVertical="true"
+        android:textAlignment="center"
+        android:textColor="@color/holo_blue_dark"
+        android:textSize="@dimen/dimen_14sp"
+        android:textStyle="bold" />
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/imageViewUpiNext"
+        android:layout_width="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_toRightOf="@+id/textViewUpiPinNext"
+        app:srcCompat="@drawable/ic_action_next_blue" />
+    </RelativeLayout>
+</RelativeLayout>

@@ -17,12 +17,6 @@
             android:layout_height="?attr/actionBarSize"
             >
 
-            <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/imageviewBackFirst"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                app:srcCompat="@drawable/ic_action_back"/>
-
             <LinearLayout
                 android:id="@+id/layoutFundooPay"
                 android:layout_width="wrap_content"
@@ -34,7 +28,6 @@
                     android:id="@+id/textViewFundoo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@string/bauhaus_93"
                     android:text="fundoo"
                     android:textColor="@color/holo_white_dark"
                     android:textSize="@dimen/dimen_18sp"
@@ -44,8 +37,8 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/textViewFundoo"
-                    android:fontFamily="@string/bauhaus_93"
                     android:text="Pay"
+                    android:fontFamily="sans-serif-smallcaps"
                     android:textColor="@color/holo_yellow_dark"
                     android:textSize="@dimen/dimen_18sp"
                     android:textStyle="bold" />

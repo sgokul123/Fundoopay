@@ -1,4 +1,4 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.fundoopay.fundoopay.R;
+import com.fundoopay.fundoopay.base.BaseFragment;
 
 public class ServiceFragment extends BaseFragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     AppCompatTextView textViewNext,textViewFundoo,textViewPay;

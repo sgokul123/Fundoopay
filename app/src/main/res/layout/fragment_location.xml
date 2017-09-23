@@ -6,12 +6,19 @@
     android:layout_height="match_parent"
     android:background="@color/holo_blue_dark"
     android:orientation="vertical">
-
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_gravity="top"
+        android:layout_marginTop="@dimen/dimen_100dp"
+        android:layout_height="match_parent">
     <LinearLayout
         android:id="@+id/linearLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayout2"
+        android:layout_alignParentTop="true"
         android:orientation="vertical">
 
         <TextView
@@ -37,16 +44,14 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:layout_marginTop="-50dp"
+        android:layout_below="@+id/linearLayout"
         android:orientation="vertical">
 
         <android.support.v7.widget.AppCompatImageView
             android:id="@+id/imageViewLacation"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_100dp"
-            android:layout_below="@+id/linearLayout"
-            android:layout_marginTop="@dimen/dimen_100dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
             android:transitionName="@string/transition_title_image"
             app:srcCompat="@drawable/ic_action_location" />
 
@@ -54,7 +59,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_below="@+id/imageViewLacation"
-            android:layout_marginBottom="@dimen/dimen_40dp">
+            android:layout_marginTop="@dimen/dimen_10dp"
+          >
 
             <android.support.v7.widget.AppCompatTextView
                 android:id="@+id/textViweLocateMe"
@@ -80,15 +86,19 @@
                 android:visibility="gone" />
         </RelativeLayout>
     </LinearLayout>
-
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_below="@+id/linearLayout2"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="@dimen/dimen_100dp"
+            android:layout_height="wrap_content">
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/textViewNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerInParent="true"
-        android:layout_marginBottom="@dimen/dimen_30dp"
         android:fontFamily="@string/Avenir"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/dimen_7dp"
         android:text="Next"
         android:textAlignment="center"
         android:textColor="@color/holo_white_dark"
@@ -98,9 +108,10 @@
     <android.support.v7.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="@dimen/dimen_20dp"
         android:layout_toRightOf="@+id/textViewNext"
         app:srcCompat="@drawable/ic_action_next" />
+        </RelativeLayout>
+    </RelativeLayout>
+</ScrollView>
 </RelativeLayout>
 

@@ -1,4 +1,4 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.Switch;
 
 import com.fundoopay.fundoopay.R;
+import com.fundoopay.fundoopay.base.BaseFragment;
 
 import butterknife.ButterKnife;
 

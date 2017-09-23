@@ -1,12 +1,12 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.widget.AppCompatButton;
 import android.support.v7.widget.AppCompatTextView;
-import android.support.v7.widget.VectorEnabledTintResources;
 import android.telephony.SubscriptionInfo;
 import android.telephony.SubscriptionManager;
 import android.view.LayoutInflater;
@@ -15,6 +15,7 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.fundoopay.fundoopay.R;
+import com.fundoopay.fundoopay.base.BaseFragment;
 
 import java.util.List;
 
@@ -66,14 +67,22 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
     public void onClick(View view) {
         switch (view.getId()) {
             case R.id.simCardFirst:
-                simCardFirst.setBackgroundColor(getResources().getColor(R.color.holo_blue_dark));
-                simCardSecound.setBackgroundColor(getResources().getColor(R.color.holo_white_dark));
+                /*simCardFirst.setBackgroundColor(getResources().getColor(R.color.holo_blue_dark));
+                simCardSecound.setBackgroundColor(getResources().getColor(R.color.holo_white_dark));*/
+                simCardFirst.setBackgroundColor(Color.TRANSPARENT);
+                simCardFirst.setTextColor(getResources().getColor(R.color.holo_blue_dark));
+                simCardSecound.setTextColor(getResources().getColor(R.color.holo_white_dark));
+                simCardSecound.setBackgroundDrawable(getContext().getDrawable(R.drawable.left_diagonal_square));
                 getsimDetails();
                 break;
             case R.id.simCardSecound:
-                simCardFirst.setBackgroundColor(getResources().getColor(R.color.holo_white_dark));
-                simCardSecound.setBackgroundColor(getResources().getColor(R.color.holo_blue_dark));
-              getsimDetails();
+              /*  simCardFirst.setBackgroundColor(getResources().getColor(R.color.holo_white_dark));
+                simCardSecound.setBackgroundColor(getResources().getColor(R.color.holo_blue_dark));*/
+                simCardSecound.setBackgroundColor(Color.TRANSPARENT);
+                simCardSecound.setTextColor(getResources().getColor(R.color.holo_blue_dark));
+                simCardFirst.setTextColor(getResources().getColor(R.color.holo_white_dark));
+                simCardFirst.setBackgroundDrawable(getContext().getDrawable(R.drawable.square_diagonal));
+                getsimDetails();
                 break;
             case  R.id.verifyMobileNext:
                 VerifyFragment verifyFragment=new VerifyFragment();

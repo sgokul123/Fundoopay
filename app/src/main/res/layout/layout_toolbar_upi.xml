@@ -18,7 +18,7 @@
             >
 
             <android.support.v7.widget.AppCompatImageView
-                android:id="@+id/imageviewBackFirst"
+                android:id="@+id/imageviewBack"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/ic_action_back"/>
@@ -34,8 +34,7 @@
                     android:id="@+id/textViewFundoo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@string/bauhaus_93"
-                    android:text="fundoo"
+                    android:text="Add  "
                     android:textColor="@color/holo_white_dark"
                     android:textSize="@dimen/dimen_18sp"
                     android:textStyle="bold" />
@@ -44,9 +43,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/textViewFundoo"
-                    android:fontFamily="@string/bauhaus_93"
-                    android:text="Pay"
-                    android:textColor="@color/holo_yellow_dark"
+                    android:text="Account"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:textColor="@color/holo_white_dark"
                     android:textSize="@dimen/dimen_18sp"
                     android:textStyle="bold" />
 

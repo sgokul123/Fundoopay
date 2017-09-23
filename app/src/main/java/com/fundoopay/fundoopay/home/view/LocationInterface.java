@@ -1,4 +1,4 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
 import com.google.android.gms.common.api.GoogleApiClient;
 

@@ -5,30 +5,33 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/holo_blue_dark"
-    tools:context="com.fundoopay.fundoopay.view.OtpSendFragment">
+    tools:context=".home.view.OtpSendFragment">
 
 
+    <android.support.v7.widget.AppCompatTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/textViewVerifySms"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:fontFamily="@string/Avenir"
+        android:text="Verify Mobile Number"
+        android:textColor="@color/holo_white_dark"
+        android:textSize="@dimen/dimen_30sp" />
 
-        <android.support.v7.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:textSize="@dimen/dimen_30sp"
-            android:layout_marginLeft="@dimen/dimen_30dp"
-            android:layout_above="@+id/textViewVerifySms"
-            android:textColor="@color/holo_white_dark"
-            android:text="Verify Mobile Number"/>
-        <android.support.v7.widget.AppCompatTextView
-            android:id="@+id/textViewVerifySms"
-            android:layout_marginLeft="@dimen/dimen_30dp"
-            android:layout_width="match_parent"
-            android:layout_marginTop="@dimen/dimen_20dp"
-            android:layout_height="wrap_content"
-            android:textColor="@color/holo_white_dark"
-            android:layout_centerVertical="true"
-            android:textSize="@dimen/dimen_18sp"
-            android:text="@string/phone_verification"
-            />
-        <LinearLayout
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/textViewVerifySms"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_30dp"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:fontFamily="@string/Avenir"
+        android:text="@string/phone_verification"
+        android:textColor="@color/holo_white_dark"
+        android:textSize="@dimen/dimen_18sp" />
+        <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_marginTop="@dimen/dimen_30dp"
             android:layout_height="wrap_content"
@@ -38,32 +41,43 @@
             android:layout_centerHorizontal="true"
             android:background="@color/holo_white_dark"
             android:orientation="horizontal">
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/simCardFirst"
-                android:layout_width="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/dimen_100dp"
                 android:layout_height="wrap_content"
-                android:text="Sim 1"
-                android:background="@color/holo_blue_dark"
-                android:layout_weight="0.5"/>
+                android:layout_weight="0.5"
+                android:background="@android:color/transparent"
+                android:fontFamily="@string/Avenir"
+                android:text="     Sim 1"
+                android:textAlignment="textStart"
+                android:textColor="@color/holo_blue_dark" />
+
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/simCardSecound"
-                android:layout_width="wrap_content"
+                style="?android:attr/borderlessButtonStyle"
+                android:layout_width="@dimen/dimen_100dp"
                 android:layout_height="wrap_content"
-                android:background="@color/holo_white_dark"
-                android:text="Sim 2"
+                android:layout_marginLeft="60dp"
                 android:layout_weight="0.5"
-                />
-    </LinearLayout>
+                android:background="@drawable/left_diagonal_square"
+                android:fontFamily="@string/Avenir"
+                android:text="Sim 2      "
+                android:textAlignment="textEnd"
+                android:textColor="@color/holo_white_dark" />
+    </RelativeLayout>
+
     <android.support.v7.widget.AppCompatTextView
-        android:layout_alignParentBottom="true"
         android:id="@+id/verifyMobileNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
+        android:layout_marginBottom="@dimen/dimen_30dp"
         android:fontFamily="@string/Avenir"
         android:text="Next"
         android:textAlignment="center"
-        android:layout_marginBottom="@dimen/dimen_30dp"
         android:textColor="@color/holo_white_dark"
         android:textSize="@dimen/dimen_14sp"
         android:textStyle="bold" />
@@ -71,7 +85,7 @@
         android:layout_toRightOf="@+id/verifyMobileNext"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
-        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_21dp"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_action_next"/>
 </RelativeLayout>

@@ -9,7 +9,9 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import com.fundoopay.fundoopay.R;
+import com.fundoopay.fundoopay.addaccount.AddAccountFragment;
 import com.fundoopay.fundoopay.bankdetail.model.BankModel;
+import com.fundoopay.fundoopay.bankdetail.view.BankDetailActivity;
 
 import java.util.ArrayList;
 
@@ -17,9 +19,11 @@ import java.util.ArrayList;
 public class BankAdapter  extends RecyclerView.Adapter<BankAdapter.ViewHolder>{
     Context mContext;
     ArrayList<BankModel> mBanks;
-    public BankAdapter(Context context, ArrayList<BankModel> banks) {
+    BankDetailActivity bankDetailActivity;
+    public BankAdapter(Context context, BankDetailActivity bankDetailActivity, ArrayList<BankModel> banks) {
         this.mContext=context;
         this.mBanks=banks;
+        this.bankDetailActivity=bankDetailActivity;
     }
 
     @Override
@@ -50,7 +54,7 @@ public class BankAdapter  extends RecyclerView.Adapter<BankAdapter.ViewHolder>{
         public void onClick(View view) {
          switch (view.getId()){
              case R.id.textViewBank:
-                 Toast.makeText(mContext, mBanks.get(getAdapterPosition())+"   Selected", Toast.LENGTH_SHORT).show();
+                 bankDetailActivity.getCallBack();
                  break;
          }
         }

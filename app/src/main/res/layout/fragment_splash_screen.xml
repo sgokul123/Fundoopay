@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context="com.fundoopay.fundoopay.view.SplashScreenFragment">
+    tools:context=".home.view.SplashScreenFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -28,6 +28,7 @@
                 android:id="@+id/textViewFundoo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:fontFamily="@string/bauhaus_93"
                 android:text="fundoo"
                 android:textColor="@color/holo_white_dark"
                 android:textSize="@dimen/dimen_30sp"
@@ -38,6 +39,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/textViewFundoo"
+                android:fontFamily="@string/bauhaus_93"
                 android:text="Pay"
                 android:textColor="@color/holo_yellow_dark"
                 android:textSize="@dimen/dimen_30sp"

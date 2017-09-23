@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@color/holo_blue_dark"
-    tools:context="com.fundoopay.fundoopay.view.VerifyFragment">
+    tools:context=".home.view.VerifyFragment">
     <RelativeLayout
         android:id="@+id/relativeOtp"
         android:layout_width="match_parent"
@@ -30,6 +30,10 @@
             android:layout_width="@dimen/dimen_30dp"
             android:textSize="@dimen/dimen_18sp"
             android:layout_marginLeft="@dimen/dimen_20dp"
+            android:maxLines="1"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:backgroundTint="@color/holo_white"
             android:textColor="@color/holo_white_dark"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.AppCompatEditText
@@ -37,17 +41,29 @@
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp"
             android:layout_marginLeft="@dimen/dimen_20dp"
+            android:maxLines="1"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:backgroundTint="@color/holo_white"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.AppCompatEditText
             android:layout_width="@dimen/dimen_30dp"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp"
+            android:backgroundTint="@color/holo_white"
+            android:maxLines="1"
+            android:maxLength="1"
+            android:textAlignment="center"
             android:layout_marginLeft="@dimen/dimen_20dp"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.AppCompatEditText
             android:layout_width="@dimen/dimen_30dp"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp"
+            android:maxLines="1"
+            android:maxLength="1"
+            android:textAlignment="center"
+            android:backgroundTint="@color/holo_white"
             android:layout_marginLeft="@dimen/dimen_20dp"
             android:layout_height="wrap_content" />
 
@@ -80,6 +96,16 @@
             android:layout_marginTop="-100dp"
             app:srcCompat="@drawable/imageverify"
             />
+        <com.mikhaellopez.circularprogressbar.CircularProgressBar
+            android:id="@+id/yourCircularProgressbar"
+            android:layout_width="@dimen/dimen_150dp"
+            android:layout_height="@dimen/dimen_150dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            app:cpb_background_progressbar_color="#FFCDD2"
+            app:cpb_background_progressbar_width="5dp"
+            app:cpb_progressbar_color="@color/holo_white"
+            app:cpb_progressbar_width="10dp" />
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

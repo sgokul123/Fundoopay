@@ -5,8 +5,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/holo_blue_dark"
-    tools:context="com.fundoopay.fundoopay.view.MobileVerificationFragment">
-5
+    tools:context=".home.view.MobileVerificationFragment">
+
     <LinearLayout
         android:id="@+id/linearLayoutVerify"
         android:layout_width="match_parent"
@@ -106,7 +106,7 @@
         android:layout_toRightOf="@+id/mobileVerifyeNext"
         android:layout_alignParentBottom="true"
         android:layout_width="wrap_content"
-        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_marginBottom="@dimen/dimen_21dp"
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/ic_action_next"/>
 </RelativeLayout>

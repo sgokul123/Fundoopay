@@ -1,21 +1,19 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.fundoopay.fundoopay.R;
+import com.fundoopay.fundoopay.base.BaseFragment;
 
 
 public class SplashScreenFragment extends BaseFragment {
     AppCompatTextView textViewFundoo,textViewPay,textViewSDisc;
-    Typeface aargh,avnir,bauhaus;
-
     private static long SPLASH_TIME_OUT=5000;
     LocationInterface locationInterface;
     public SplashScreenFragment() {
@@ -52,13 +50,7 @@ public class SplashScreenFragment extends BaseFragment {
         textViewFundoo=view.findViewById(R.id.textViewFundoo);
         textViewPay=view.findViewById(R.id.textViewPay);
         textViewSDisc=view.findViewById(R.id.textViewSplash);
-        avnir=Typeface.createFromAsset(getContext().getAssets(),"Avenir-Medium.ttf");
-        bauhaus=Typeface.createFromAsset(getContext().getAssets(),"Bauhaus-93.ttf");
 
-
-        textViewPay.setTypeface(bauhaus);
-        textViewFundoo.setTypeface(bauhaus);
-        textViewSDisc.setTypeface(avnir);
     }
 
     @Override

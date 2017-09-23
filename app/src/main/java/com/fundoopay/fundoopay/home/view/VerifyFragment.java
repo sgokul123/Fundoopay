@@ -1,26 +1,30 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.home.view;
 
-import android.content.Context;
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Typeface;
-import android.net.Uri;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.v4.app.Fragment;
 import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.view.animation.DecelerateInterpolator;
+import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
 import com.fundoopay.fundoopay.R;
 import com.fundoopay.fundoopay.bankdetail.view.BankDetailActivity;
+import com.fundoopay.fundoopay.base.BaseFragment;
+import com.mikhaellopez.circularprogressbar.CircularProgressBar;
 
 public class VerifyFragment extends BaseFragment implements View.OnClickListener {
     AppCompatTextView textViewVerify;
     RelativeLayout relativeLayoutOtp,relativeLayoutVerify;
     private long SPLASH_TIME_OUT=1000;
     private Typeface avnir;
+    private ProgressBar mprogressBar;
+    private CircularProgressBar circularProgressBar;
 
     public VerifyFragment() {
         // Required empty public constructor
@@ -48,6 +52,8 @@ public class VerifyFragment extends BaseFragment implements View.OnClickListener
         relativeLayoutOtp=view.findViewById(R.id.relativeOtp);
         relativeLayoutVerify=view.findViewById(R.id.relativeVerify);
         avnir= Typeface.createFromAsset(getContext().getAssets(),"avnir.ttf");
+         circularProgressBar = (CircularProgressBar)view.findViewById(R.id.yourCircularProgressbar);
+
 
 
     }
@@ -64,11 +70,15 @@ public class VerifyFragment extends BaseFragment implements View.OnClickListener
             case R.id.textViewVerify:
                 relativeLayoutOtp.setVisibility(View.GONE);
                 relativeLayoutVerify.setVisibility(View.VISIBLE);
+                int animationDuration = 2000; // 2500ms = 2,5s
+                circularProgressBar.setProgressWithAnimation(85,animationDuration);
+
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
                         Intent intent=new Intent(getActivity(), BankDetailActivity.class);
                         startActivity(intent);
+
                     }
                 }, SPLASH_TIME_OUT);
                 break;

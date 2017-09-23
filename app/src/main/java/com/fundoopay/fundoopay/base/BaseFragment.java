@@ -1,9 +1,8 @@
-package com.fundoopay.fundoopay.view;
+package com.fundoopay.fundoopay.base;
 
 import android.support.v4.app.Fragment;
 import android.view.View;
-
-abstract class BaseFragment extends Fragment {
+public abstract class BaseFragment extends Fragment {
     public abstract void initView(View view);
     public abstract void clickListener();
 }

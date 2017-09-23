@@ -4,30 +4,44 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginLeft="@dimen/dimen_20dp"
-    android:layout_marginRight="@dimen/dimen_20dp"
+    android:clickable="true"
+    android:background="@color/holo_white"
     tools:context="com.fundoopay.fundoopay.addaccount.AddAccountFragment">
+    <include layout="@layout/layout_toolbar_upi"
+        android:id="@+id/toolbarBank"/>
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/toolbarBank"
+        android:layout_height="match_parent">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="bottom"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        >
     <LinearLayout
         android:id="@+id/linearLayoutFirst"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:weightSum="1"
+        android:layout_marginTop="@dimen/dimen_20dp"
+        android:layout_centerHorizontal="true"
         android:orientation="horizontal">
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_weight="0.6">
             <android.support.v7.widget.AppCompatImageView
-                android:layout_width="match_parent"
-                android:layout_height="@dimen/dimen_100dp"
-                app:srcCompat="@mipmap/unionbank"/>
-            <android.support.v7.widget.AppCompatTextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_18sp"
-                android:textAlignment="textEnd"
-                android:text="Union Bank of India"/>
+                android:id="@+id/imageViewLogo"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dimen_20dp"
+                app:srcCompat="@mipmap/unnamed"/>
+
         </LinearLayout>
         <LinearLayout
             android:layout_width="match_parent"
@@ -36,21 +50,33 @@
             android:layout_marginLeft="@dimen/dimen_10dp"
             android:layout_marginTop="@dimen/dimen_20dp"
             android:layout_height="wrap_content">
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewCardNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_18sp"
-                android:text="xxxxxxxx4251"/>
+                android:fontFamily="@string/Avenir"
+                android:text="xxxxxxxx4251"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="@dimen/dimen_18sp" />
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewAccountType"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:textSize="@dimen/dimen_18sp"
-                android:text="Saving"/>
+                android:fontFamily="@string/Avenir"
+                android:text="Saving"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="@dimen/dimen_18sp" />
+
             <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewIFSC"
                 android:layout_width="wrap_content"
-                android:textSize="@dimen/dimen_18sp"
                 android:layout_height="wrap_content"
-                android:text="IFSC - 0000505"/>
+                android:fontFamily="@string/Avenir"
+                android:text="IFSC - 0000505"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="@dimen/dimen_18sp" />
         </LinearLayout>
     </LinearLayout>
     <LinearLayout
@@ -65,35 +91,56 @@
         <android.support.v7.widget.AppCompatTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/dimen_10dp"
-            android:textSize="@dimen/dimen_30sp"
+            android:layout_marginTop="@dimen/dimen_5dp"
+            android:textSize="@dimen/dimen_18sp"
             android:textColor="@color/holo_blue_dark"
             android:text="UPI PIN"/>
 
 
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextPin1"
             android:layout_width="@dimen/dimen_50dp"
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dimen_10dp"
+            android:hint=""
+            android:textSize="@dimen/dimen_18sp"
+            android:maxLines="1"
+            android:textAlignment="center"
+            android:backgroundTint="@color/holo_blue_dark"
             android:textColor="@color/holo_blue_dark"
             android:maxLength="1"
             />
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edittextPin2"
             android:layout_width="@dimen/dimen_50dp"
             android:layout_height="wrap_content"
+            android:backgroundTint="@color/holo_blue_dark"
             android:textColor="@color/holo_blue_dark"
+            android:textAlignment="center"
+            android:textSize="@dimen/dimen_18sp"
+            android:maxLines="1"
             android:maxLength="1"
             />
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edittextPin3"
             android:layout_width="@dimen/dimen_50dp"
         android:layout_height="wrap_content"
+            android:backgroundTint="@color/holo_blue_dark"
             android:textColor="@color/holo_blue_dark"
+            android:textSize="@dimen/dimen_18sp"
+            android:textAlignment="center"
             android:maxLength="1"
+            android:maxLines="1"
             />
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/edittextPin4"
             android:layout_width="@dimen/dimen_50dp"
+            android:backgroundTint="@color/holo_blue_dark"
             android:layout_height="wrap_content"
+            android:textAlignment="center"
             android:textColor="@color/holo_blue_dark"
+            android:textSize="@dimen/dimen_18sp"
+            android:maxLines="1"
             android:maxLength="1"
             />
     </LinearLayout>
@@ -105,40 +152,57 @@
         android:alpha="0.8"
         android:layout_marginTop="@dimen/dimen_30dp"
         android:layout_height="1dp"/>
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/textViewTextPin"
-        android:layout_width="match_parent"
-        android:layout_marginTop="@dimen/dimen_20dp"
-        android:layout_below="@+id/viewPin"
-        android:layout_height="wrap_content"
-        android:text="If you don’t have UPI PIN"/>
 
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/buttonAddPin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_20dp"
-        android:textColor="@color/holo_white_dark"
-        android:background="@color/holo_blue_dark"
-        android:layout_below="@+id/textViewTextPin"
-        android:text="SET UPI PIN"/>
-    <android.support.v7.widget.AppCompatButton
-        android:id="@+id/buttonResetPin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dimen_20dp"
-        android:background="@drawable/square"
-        android:layout_below="@+id/buttonAddPin"
-        android:text="RESET UPI PIN"/>
-    <android.support.v7.widget.AppCompatTextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Submit"
-        android:textColor="@color/holo_blue_dark"
-        android:alpha="0.7"
-        android:textSize="@dimen/dimen_18sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="@dimen/dimen_30dp"
-        />
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textViewTextPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/viewPin"
+            android:layout_marginLeft="@dimen/dimen_5dp"
+            android:layout_marginRight="@dimen/dimen_5dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:fontFamily="@string/Avenir"
+            android:text="If you don’t have UPI PIN" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonAddPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewTextPin"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@color/holo_blue_dark"
+            android:fontFamily="@string/Avenir"
+            android:text="SET UPI PIN"
+            android:textColor="@color/holo_white_dark" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonResetPin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/buttonAddPin"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:background="@drawable/square"
+            android:fontFamily="@string/Avenir"
+            android:text="RESET UPI PIN"
+            android:textColor="@color/holo_blue_dark" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/textviewSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/buttonResetPin"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="@dimen/dimen_30dp"
+            android:alpha="0.7"
+            android:fontFamily="@string/Avenir"
+            android:text="Submit"
+            android:textColor="@color/holo_blue_dark"
+            android:textSize="@dimen/dimen_18sp" />
+    </RelativeLayout>
+    </ScrollView>
 </RelativeLayout>
