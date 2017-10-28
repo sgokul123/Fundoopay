@@ -13,12 +13,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
+        android:layout_marginBottom="@dimen/dimen_30dp"
         android:orientation="vertical">
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Last 6 digits of your debit card number"
+            android:text="@string/set_upi_text"
             android:textAlignment="center"
             android:textColor="@color/holo_blue_dark" />
 
@@ -34,6 +35,7 @@
                 android:layout_width="@dimen/dimen_30dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:text="@string/spase"
                 android:maxLength="1"
                 android:textAlignment="center"
                 android:backgroundTint="@color/holo_blue_dark"
@@ -44,6 +46,7 @@
                 android:layout_width="@dimen/dimen_30dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:maxLength="1"
                 android:backgroundTint="@color/holo_blue_dark"
@@ -54,6 +57,7 @@
                 android:layout_width="@dimen/dimen_30dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:maxLength="1"
                 android:backgroundTint="@color/holo_blue_dark"
@@ -64,6 +68,7 @@
                 android:layout_width="@dimen/dimen_30dp"
                 android:maxLines="1"
                 android:maxLength="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/holo_blue_dark"
@@ -75,6 +80,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:maxLength="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
@@ -85,17 +91,18 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:maxLength="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
         </LinearLayout>
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginTop="@dimen/dimen_20dp"
-            android:text="Validity of card"
+            android:text="@string/validity_of_card"
             android:textColor="@color/holo_blue_dark" />
 
         <LinearLayout
@@ -111,6 +118,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:maxLength="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
@@ -121,6 +129,7 @@
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:maxLength="1"
+                android:text="@string/spase"
                 android:textAlignment="center"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
@@ -129,11 +138,14 @@
                 android:layout_width="wrap_content"
                 android:layout_height="@dimen/dimen_30sp"
                 android:layout_marginTop="@dimen/dimen_5dp"
+                android:textSize="@dimen/dimen_18sp"
+                android:textColor="@color/holo_blue_dark"
                 android:text="/" />
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextValidity3"
                 android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
                 android:maxLength="1"
@@ -146,6 +158,7 @@
                 android:layout_width="@dimen/dimen_30dp"
                 android:layout_height="wrap_content"
                 android:maxLines="1"
+                android:text="@string/spase"
                 android:maxLength="1"
                 android:textAlignment="center"
                 android:backgroundTint="@color/holo_blue_dark"
@@ -158,8 +171,9 @@
         android:layout_height="wrap_content"
         android:layout_centerVertical="true"
         android:orientation="vertical"
-        android:visibility="gone">
-        <android.support.v7.widget.AppCompatTextView
+        android:visibility="gone"
+      >
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:textColor="@color/holo_blue_dark"
@@ -173,41 +187,69 @@
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextUpiPin1"
                 android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
+                android:maxLines="1"
+                android:maxLength="1"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextUpiPin2"
                 android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
+                android:maxLines="1"
+                android:maxLength="1"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextUpiPin3"
                 android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
+                android:maxLines="1"
+                android:maxLength="1"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextUpiPin4"
                 android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
                 android:layout_height="wrap_content"
                 android:backgroundTint="@color/holo_blue_dark"
                 android:textColor="@color/holo_blue_dark" />
-
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUpiPin5"
+                android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
+            <android.support.v7.widget.AppCompatEditText
+                android:id="@+id/editTextUpiPin6"
+                android:layout_width="@dimen/dimen_30dp"
+                android:text="@string/spase"
+                android:maxLines="1"
+                android:maxLength="1"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark" />
         </LinearLayout>
     </LinearLayout>
     <RelativeLayout
         android:id="@+id/relativeUpiPin"
         android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_30dp"
         android:layout_height="@dimen/dimen_50dp"
         android:layout_alignParentBottom="true" >
-    <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
         android:id="@+id/textViewUpiPinNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:fontFamily="@string/Avenir"
-        android:text="Next"
+        android:text="@string/next"
         android:layout_marginTop="@dimen/dimen_5dp"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="@dimen/dimen_20dp"

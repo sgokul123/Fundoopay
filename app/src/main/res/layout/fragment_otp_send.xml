@@ -8,7 +8,7 @@
     tools:context=".home.view.OtpSendFragment">
 
 
-    <android.support.v7.widget.AppCompatTextView
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@+id/textViewVerifySms"
@@ -17,9 +17,9 @@
         android:fontFamily="@string/Avenir"
         android:text="Verify Mobile Number"
         android:textColor="@color/holo_white_dark"
-        android:textSize="@dimen/dimen_30sp" />
+        android:textSize="@dimen/dimen_18sp" />
 
-    <android.support.v7.widget.AppCompatTextView
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
         android:id="@+id/textViewVerifySms"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -30,7 +30,7 @@
         android:fontFamily="@string/Avenir"
         android:text="@string/phone_verification"
         android:textColor="@color/holo_white_dark"
-        android:textSize="@dimen/dimen_18sp" />
+        android:textSize="@dimen/dimen_14sp" />
         <RelativeLayout
             android:layout_width="wrap_content"
             android:layout_marginTop="@dimen/dimen_30dp"
@@ -49,7 +49,6 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="0.5"
                 android:background="@android:color/transparent"
-                android:fontFamily="@string/Avenir"
                 android:text="     Sim 1"
                 android:textAlignment="textStart"
                 android:textColor="@color/holo_blue_dark" />
@@ -62,20 +61,18 @@
                 android:layout_marginLeft="60dp"
                 android:layout_weight="0.5"
                 android:background="@drawable/left_diagonal_square"
-                android:fontFamily="@string/Avenir"
                 android:text="Sim 2      "
                 android:textAlignment="textEnd"
                 android:textColor="@color/holo_white_dark" />
     </RelativeLayout>
 
-    <android.support.v7.widget.AppCompatTextView
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
         android:id="@+id/verifyMobileNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/dimen_30dp"
-        android:fontFamily="@string/Avenir"
         android:text="Next"
         android:textAlignment="center"
         android:textColor="@color/holo_white_dark"

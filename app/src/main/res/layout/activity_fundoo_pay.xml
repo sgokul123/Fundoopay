@@ -1,11 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_height="match_parent"
     android:background="@color/holo_white"
-    tools:context="com.fundoopay.fundoopay.dashboard.view.FundooPayActivity">
+    >
 
     <include
         android:id="@+id/include_first"
@@ -15,44 +14,165 @@
         android:id="@+id/linearLayoutDash1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_below="@+id/include_first"
+        android:orientation="horizontal"
         android:weightSum="1">
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/appCompatButton1"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_weight="0.43"
-            android:layout_width="match_parent"
-            android:background="@drawable/tab_layout_secound"
+            android:background="@drawable/tab_left_layout"
             android:fontFamily="@string/Avenir"
             android:text="Outstanding Bills"
-            style="?android:attr/borderlessButtonStyle"
-            />
+            android:textColor="@color/holo_blue_dark" />
 
         <android.support.v7.widget.AppCompatButton
             android:id="@+id/appCompatButton2"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:layout_marginLeft="-50dp"
             android:layout_weight="0.57"
-            android:background="@drawable/tab_layout_one"
-            android:fontFamily="@string/Avenir"
-            android:text="   Oustanding Amounts"
-            style="?android:attr/borderlessButtonStyle"
-            />
+            android:background="@drawable/tab_right_layout"
+            android:textColor="@color/holo_blue_dark"
+            android:text="   Oustanding Amounts" />
+    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewDashBoard"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/linearLayoutDash1"
+        android:layout_marginLeft="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        android:layout_marginTop="@dimen/dimen_10dp" />
+
+
+
+    <LinearLayout
+        android:id="@+id/layoutMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/floatingButtonMenu"
+        android:layout_alignParentRight="true"
+        android:orientation="vertical"
+        android:visibility="gone"
+       >
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <com.fundoopay.fundoopay.custom.CustomTextViewFA
+                android:layout_toLeftOf="@+id/floatingButtonMenuAdd"
+                android:layout_width="match_parent"
+                android:text=" Invite       "
+                android:alpha="0.5"
+                android:textColor="@android:color/black"
+                android:layout_alignParentBottom="true"
+                android:textSize="@dimen/dimen_18sp"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:layout_height="wrap_content" />
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingButtonMenuAdd"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:src="@drawable/ic_action_add"
+                app:backgroundTint="@color/holo_white_dark"
+                android:layout_marginRight="@dimen/dimen_10dp"
+                />
+        </LinearLayout>
+       <LinearLayout
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal">
+
+           <com.fundoopay.fundoopay.custom.CustomTextViewFA
+               android:layout_toLeftOf="@+id/floatingButtonMenuSave"
+               android:layout_width="wrap_content"
+               android:text="Create bill"
+               android:alpha="0.5"
+               android:layout_alignParentBottom="true"
+               android:textSize="@dimen/dimen_18sp"
+               android:textColor="@android:color/black"
+               android:layout_marginTop="@dimen/dimen_20dp"
+               android:layout_marginRight="@dimen/dimen_20dp"
+               android:layout_height="wrap_content" />
+           <android.support.design.widget.FloatingActionButton
+               android:id="@+id/floatingButtonMenuSave"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_alignParentBottom="true"
+               android:layout_alignParentRight="true"
+               android:layout_marginBottom="@dimen/dimen_10dp"
+               android:layout_marginRight="@dimen/dimen_10dp"
+               android:src="@drawable/ic_action_save"
+               app:backgroundTint="@color/holo_white_dark"
+
+               />
+       </LinearLayout>
     </LinearLayout>
 
-        <android.support.v7.widget.RecyclerView
-            android:id="@+id/recyclerViewDashBoard"
-            android:layout_below="@+id/linearLayoutDash1"
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/floatingButtonMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_marginRight="@dimen/dimen_10dp"
+        app:backgroundTint="@color/holo_yellow_dark"
+        android:src="@android:drawable/ic_input_add"
+        android:tint="@android:color/white"
+        />
+
+    <LinearLayout
+        android:id="@+id/linearLayoutOutStanding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:weightSum="1">
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonOutstandingPaid"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_marginLeft="@dimen/dimen_10dp"
-            android:layout_marginRight="@dimen/dimen_10dp"
-            android:layout_marginTop="@dimen/dimen_10dp"
-            />
+            android:layout_height="?attr/actionBarSize"
+            android:layout_weight="0.43"
+            android:background="@drawable/tab_left_layout"
+            android:text="UnPaid"
+            android:textColor="@color/holo_blue_dark" />
 
-
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonOutstandingUnPaid"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:layout_marginLeft="-50dp"
+            android:layout_weight="0.57"
+            android:textColor="@color/holo_blue_dark"
+            android:background="@drawable/tab_right_layout"
+            android:text="   Paid" />
+    </LinearLayout>
+    <FrameLayout
+        android:id="@+id/framlayoutBill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/linearLayoutOutStanding"
+        android:layout_below="@+id/linearLayoutDash1"
+        android:layout_marginTop="@dimen/dimen_5dp" />
+    <FrameLayout
+        android:id="@+id/framlayoutsettting"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dimen_5dp" />
 
 </RelativeLayout>

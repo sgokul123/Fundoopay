@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_marginRight="@dimen/dimen_10dp"
+    android:layout_marginTop="@dimen/dimen_10dp"
+    android:layout_marginLeft="@dimen/dimen_10dp"
+    android:layout_marginBottom="@dimen/dimen_10dp"
+    android:layout_height="wrap_content">
+
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+        android:id="@+id/textViewPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_25sp"
+        android:textColor="@color/holo_blue_dark"
+        android:text="992233445566"/>
+
+    <android.support.v7.widget.AppCompatButton
+        android:id="@+id/buttonInvite"
+        android:layout_width="wrap_content"
+        android:background="@drawable/button_back"
+        android:textColor="@color/holo_white_dark"
+        android:textSize="@dimen/dimen_18sp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:text="Invite"/>
+
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+        android:id="@+id/textViewName"
+        android:layout_width="match_parent"
+        android:textColor="@color/holo_yellow_dark"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textSize="@dimen/dimen_18sp"
+        android:layout_below="@+id/textViewPhone"
+        android:text="John Deo"/>
+
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+        android:id="@+id/textViewAddress"
+        android:layout_below="@+id/textViewName"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:textColor="@color/holo_blue_dark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/dimen_18sp"
+        android:text="@string/customer"/>
+
+</RelativeLayout>

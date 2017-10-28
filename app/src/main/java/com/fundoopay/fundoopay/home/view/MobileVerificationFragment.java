@@ -17,19 +17,13 @@ public class MobileVerificationFragment extends BaseFragment implements View.OnC
     Switch imageViewOnOffSms;
     Switch imageViewOnOffState;
     AppCompatTextView textViewNext;
-    private Typeface avnir;
-
+    LocationFragment locationFragment;
     public MobileVerificationFragment() {
     }
 
-    public MobileVerificationFragment(LocationFragment locationFragment) {
-
-    }
-
-    public static MobileVerificationFragment newInstance(String param1, String param2) {
+    public static MobileVerificationFragment newInstance(LocationFragment locationFragment) {
         MobileVerificationFragment fragment = new MobileVerificationFragment();
-        Bundle args = new Bundle();
-       fragment.setArguments(args);
+        fragment.locationFragment=locationFragment;
         return fragment;
     }
 
@@ -49,7 +43,6 @@ public class MobileVerificationFragment extends BaseFragment implements View.OnC
        imageViewOnOffSms=view.findViewById(R.id.imageviewOnOffSms);
         imageViewOnOffState =view.findViewById(R.id.imageviewOnOffState);
         textViewNext=view.findViewById(R.id.mobileVerifyeNext);
-        avnir= Typeface.createFromAsset(getContext().getAssets(),"avnir.ttf");
 
 
     }
@@ -72,7 +65,7 @@ public class MobileVerificationFragment extends BaseFragment implements View.OnC
                 break;
             case R.id.mobileVerifyeNext:
                 OtpSendFragment otpSendFragment=new OtpSendFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutMain,otpSendFragment).addToBackStack(null).commit();
+                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,otpSendFragment).addToBackStack(null).commit();
                 break;
             default:
                 break;

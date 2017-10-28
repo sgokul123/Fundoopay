@@ -22,19 +22,21 @@
         android:layout_below="@+id/layoutToolbar"
         >
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:id="@+id/textViewSelectBank"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/dimen_20dp"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_18sp"
             android:textColor="@color/holo_blue_dark"
             android:text="Select Your Bank"/>
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:id="@+id/textViewAllBank"
             android:layout_width="match_parent"
             android:textColor="@color/holo_blue_dark"
             android:layout_below="@+id/textViewSelectBank"
             android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_14sp"
             android:text="All Banks"/>
         <android.support.v7.widget.RecyclerView
             android:layout_below="@+id/textViewAllBank"
@@ -44,12 +46,12 @@
             android:layout_height="wrap_content"
             />
     </RelativeLayout>
+        <FrameLayout
+            android:id="@+id/framlayoutBank"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:layout_editor_absoluteY="8dp"
+            tools:layout_editor_absoluteX="8dp" />
     </RelativeLayout>
-    <FrameLayout
-        android:id="@+id/framlayoutBank"
-        android:layout_width="match_parent"
-        android:layout_below="@+id/layoutToolbar"
-        android:layout_height="match_parent"
-        tools:layout_editor_absoluteY="8dp"
-        tools:layout_editor_absoluteX="8dp" />
+
 </RelativeLayout>

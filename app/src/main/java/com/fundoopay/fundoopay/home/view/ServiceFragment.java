@@ -22,13 +22,19 @@ public class ServiceFragment extends BaseFragment implements View.OnClickListene
 
     String[] country = { "India", "USA", "China", "Japan", "Other", };
     private Typeface aargh;
-    private Typeface avnir;
-    private Typeface bauhaus;
 
-    public ServiceFragment(LocationInterface locationInterface) {
-        this.locationInterface=locationInterface;
+    public ServiceFragment() {
     }
 
+   /* public ServiceFragment(LocationInterface locationInterface) {
+        this.locationInterface=locationInterface;
+    }*/
+
+    public static ServiceFragment newInstance(LocationInterface locationInterface) {
+        ServiceFragment fragment = new ServiceFragment();
+        fragment.locationInterface=locationInterface;
+        return fragment;
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -47,15 +53,7 @@ public class ServiceFragment extends BaseFragment implements View.OnClickListene
 
         editTextUName=view .findViewById(R.id.editTextUName);
         editTextShopName=view.findViewById(R.id.editTextShopName);
-        avnir=Typeface.createFromAsset(getContext().getAssets(),"Avenir-Medium.ttf");
-        bauhaus=Typeface.createFromAsset(getContext().getAssets(),"Bauhaus-93.ttf");
-
-        textViewFundoo.setTypeface(bauhaus);
-        textViewPay.setTypeface(bauhaus);
-        textViewNext.setTypeface(avnir);
-        editTextUName.setTypeface(avnir);
-        editTextShopName.setTypeface(avnir);
-        ArrayAdapter aa = new ArrayAdapter(getContext(),android.R.layout.simple_spinner_item,country);
+       ArrayAdapter aa = new ArrayAdapter(getActivity(),android.R.layout.simple_spinner_item,country);
         aa.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spin.setAdapter(aa);
     }

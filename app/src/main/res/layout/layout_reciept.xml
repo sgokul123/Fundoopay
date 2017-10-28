@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@color/holo_white"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:background="@color/holo_white">
+        <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewDate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewBillOwner"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="21, July 2017"
+                android:textColor="@color/holo_yellow_dark"
+                android:textSize="@dimen/dimen_18dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewDate"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:text="2:15 PM"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="@dimen/dimen_18dp" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/textViewRemark"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/textViewTime"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:alpha="0.8"
+                android:layout_marginBottom="@dimen/dimen_10dp"
+                android:text="Commets or remarks given while creating bill"
+                android:textColor="@color/holo_blue_dark"
+                android:textSize="@dimen/dimen_14sp" />
+
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/actualAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginTop="@dimen/dimen_20dp"
+                android:layout_marginRight="@dimen/dimen_20dp"
+                android:drawableLeft="@drawable/ic_rupee_indian"
+                android:text="100"
+                android:textColor="@color/holo_yellow_dark"
+                android:textSize="@dimen/dimen_30dp" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:alpha="0.6"
+            android:layout_marginBottom="@dimen/dimen_5dp"
+            android:layout_below="@+id/textViewRemark"
+            android:background="@color/holo_blue_dark"/>
+    </RelativeLayout>
+</LinearLayout>

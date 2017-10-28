@@ -57,17 +57,17 @@ public class BankDetailActivity extends BaseActivity {
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() <=1) {
+        if (getFragmentManager().getBackStackEntryCount() <1) {
             finish();
             super.onBackPressed();
         } else {
-            getSupportFragmentManager().popBackStack();
+            getFragmentManager().popBackStack();
         }
     }
 
     public void getCallBack() {
-        AddAccountFragment addAccountFragment = new AddAccountFragment(this);
-        getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutBank, addAccountFragment).addToBackStack(null).commit();
+       // AddAccountFragment addAccountFragment = new AddAccountFragment(this);
+        getFragmentManager().beginTransaction().replace(R.id.framlayoutBank, AddAccountFragment.newInstance(this)).addToBackStack(null).commit();
     }
 
     @OnClick(R.id.imageviewBackFirst)

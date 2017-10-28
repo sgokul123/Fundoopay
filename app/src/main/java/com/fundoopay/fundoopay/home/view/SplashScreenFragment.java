@@ -19,14 +19,12 @@ public class SplashScreenFragment extends BaseFragment {
     public SplashScreenFragment() {
 
     }
-    public SplashScreenFragment(LocationInterface locationInterface) {
-        this.locationInterface=locationInterface;
-    }
 
-    public static SplashScreenFragment newInstance(String param1, String param2) {
+
+    public static SplashScreenFragment newInstance(LocationInterface locationInterface) {
         SplashScreenFragment fragment = new SplashScreenFragment();
-        Bundle args = new Bundle();
-         fragment.setArguments(args);
+        fragment.locationInterface=locationInterface;
+
         return fragment;
     }
 

@@ -21,7 +21,7 @@ import butterknife.Unbinder;
 public class AddAccountFragment extends BaseFragment {
     @BindView(R.id.imageviewBack)
     AppCompatImageView imageviewBack;
-    private Context mContext;
+    private static Context mContext;
     @BindView(R.id.imageViewLogo)
     AppCompatImageView imageViewLogo;
     @BindView(R.id.textViewCardNumber)
@@ -50,12 +50,14 @@ public class AddAccountFragment extends BaseFragment {
         // Required empty public constructor
     }
 
-    public AddAccountFragment(Context context) {
+    /*public AddAccountFragment(Context context) {
         this.mContext = context;
-    }
+    }*/
 
 
-    public static AddAccountFragment newInstance(String param1, String param2) {
+    public static AddAccountFragment newInstance(Context context) {
+        mContext = context;
+
         AddAccountFragment fragment = new AddAccountFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
@@ -91,13 +93,15 @@ public class AddAccountFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.buttonAddPin:
-                SetUPIFragment upiFragment = new SetUPIFragment(mContext);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutBank, upiFragment).addToBackStack(null).commit();
+//                SetUPIFragment upiFragment = new SetUPIFragment(mContext);
+                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutBank, SetUPIFragment.newInstance(mContext)).addToBackStack(null).commit();
                 break;
             case R.id.buttonResetPin:
 
                 break;
             case R.id.textviewSubmit:
+               // SetUPIFragment upFragment = new SetUPIFragment(mContext);
+                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutBank, SetUPIFragment.newInstance(mContext)).addToBackStack(null).commit();
 
                 break;
         }
@@ -105,6 +109,6 @@ public class AddAccountFragment extends BaseFragment {
 
     @OnClick(R.id.imageviewBack)
     public void onViewClicked() {
-        getActivity().getSupportFragmentManager().popBackStackImmediate();
+        getActivity().getFragmentManager().popBackStackImmediate();
     }
 }

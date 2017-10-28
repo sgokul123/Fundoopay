@@ -23,7 +23,6 @@ import java.util.List;
 public class OtpSendFragment extends BaseFragment implements View.OnClickListener {
     AppCompatButton simCardFirst, simCardSecound;
     AppCompatTextView verifyMobileNext;
-    private Typeface avnir;
 
     public OtpSendFragment() {
     }
@@ -52,7 +51,6 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
         simCardFirst = view.findViewById(R.id.simCardFirst);
         simCardSecound = view.findViewById(R.id.simCardSecound);
         verifyMobileNext=view.findViewById(R.id.verifyMobileNext);
-        avnir= Typeface.createFromAsset(getContext().getAssets(),"avnir.ttf");
 
     }
 
@@ -72,7 +70,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 simCardFirst.setBackgroundColor(Color.TRANSPARENT);
                 simCardFirst.setTextColor(getResources().getColor(R.color.holo_blue_dark));
                 simCardSecound.setTextColor(getResources().getColor(R.color.holo_white_dark));
-                simCardSecound.setBackgroundDrawable(getContext().getDrawable(R.drawable.left_diagonal_square));
+                simCardSecound.setBackgroundDrawable(getActivity().getDrawable(R.drawable.left_diagonal_square));
                 getsimDetails();
                 break;
             case R.id.simCardSecound:
@@ -81,12 +79,12 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 simCardSecound.setBackgroundColor(Color.TRANSPARENT);
                 simCardSecound.setTextColor(getResources().getColor(R.color.holo_blue_dark));
                 simCardFirst.setTextColor(getResources().getColor(R.color.holo_white_dark));
-                simCardFirst.setBackgroundDrawable(getContext().getDrawable(R.drawable.square_diagonal));
+                simCardFirst.setBackgroundDrawable(getActivity().getDrawable(R.drawable.square_diagonal));
                 getsimDetails();
                 break;
             case  R.id.verifyMobileNext:
                 VerifyFragment verifyFragment=new VerifyFragment();
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutMain,verifyFragment).addToBackStack(null).commit();
+                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,verifyFragment).addToBackStack(null).commit();
                 break;
         }
     }
@@ -108,7 +106,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                             break;
                     }
                 }
-                Toast.makeText(getContext(), "Sim  Number  :"+simTwoNumber+"   SirealNumber : "+simOneNumber, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Sim  Number  :"+simTwoNumber+"   SirealNumber : "+simOneNumber, Toast.LENGTH_SHORT).show();
 
             }
         } catch (Exception e) {

@@ -1,0 +1,117 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/holo_white"
+    android:clickable="false"
+   >
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutBill"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/holo_white_dark"
+                android:orientation="horizontal"
+                android:weightSum="1">
+
+                <LinearLayout
+                    android:id="@+id/layoutBName"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_marginLeft="@dimen/dimen_10dp"
+                    android:layout_toLeftOf="@+id/linearLayoutTotal"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+                        android:id="@+id/textViewBillOwner"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:text="John Deo"
+                        android:textColor="@color/holo_blue_dark"
+                        android:textSize="@dimen/dimen_25sp" />
+
+                    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+                        android:id="@+id/addressBuildingName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/textViewBillOwner"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:text="13 Braheja"
+                        android:textColor="@color/holo_yellow_dark"
+                        android:textSize="@dimen/dimen_18dp" />
+
+                    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+                        android:id="@+id/textViewMobileNumber"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/addressBuildingName"
+                        android:layout_marginTop="@dimen/dimen_10dp"
+                        android:text="9821772876"
+                        android:textColor="@color/holo_blue_dark"
+                        android:textSize="@dimen/dimen_18dp" />
+
+                    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+                        android:id="@+id/textViewAddress"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_below="@+id/textViewMobileNumber"
+                        android:layout_marginRight="@dimen/dimen_20dp"
+                        android:layout_marginTop="@dimen/dimen_20dp"
+                        android:alpha="0.8"
+                        android:text="801 Sai Samarth Business Park,\n Deonar Road, Deonar, Mumbai,\n Maharashtra, 400088."
+                        android:textColor="@color/holo_blue_dark"
+                        android:textSize="@dimen/dimen_14sp" />
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayoutTotal"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginBottom="@dimen/dimen_10dp"
+                    android:layout_weight="0.7"
+                    android:orientation="vertical">
+
+                    <com.fundoopay.fundoopay.custom.CustomTextViewFA
+                        android:id="@+id/actualAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dimen_50dp"
+                        android:drawableLeft="@drawable/ic_rupee_indian"
+                        android:text="@string/total"
+                        android:textColor="@color/holo_yellow_dark"
+                        android:textSize="@dimen/dimen_30dp" />
+
+                    <android.support.v7.widget.AppCompatImageView
+                        android:id="@+id/imageViewPrint"
+                        android:layout_width="@dimen/dimen_50dp"
+                        android:layout_height="@dimen/dimen_50dp"
+                        android:layout_marginTop="@dimen/dimen_50dp"
+                        android:background="@color/colorPrimary"
+                        app:srcCompat="@drawable/ic_action_name" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/recyclerViewBilling"
+                android:layout_width="match_parent"
+                android:layout_marginTop="@dimen/dimen_10dp"
+                android:layout_below="@+id/layoutBill"
+                android:layout_height="match_parent"
+               />
+        </RelativeLayout>
+
+</RelativeLayout>

@@ -24,8 +24,8 @@ public class MainActivity extends AppCompatActivity  implements LocationInterfac
         setContentView(R.layout.activity_main);
         ButterKnife.bind(this);
 
-        SplashScreenFragment splashScreenFragment=new SplashScreenFragment(this);
-        getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutMain,splashScreenFragment).addToBackStack(null).commit();
+       // SplashScreenFragment splashScreenFragment=new SplashScreenFragment(this);
+        getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,SplashScreenFragment.newInstance(this)).addToBackStack(null).commit();
     }
 
     @Override
@@ -46,9 +46,9 @@ public class MainActivity extends AppCompatActivity  implements LocationInterfac
 
     @Override
     public void returnFromSplashScren() {
-        getSupportFragmentManager().popBackStack();
-        ServiceFragment serviceFragment=new ServiceFragment(this);
-        getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutMain,serviceFragment).addToBackStack(null).commit();
+        getFragmentManager().popBackStack();
+        //ServiceFragment serviceFragment=new ServiceFragment(this);
+        getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,ServiceFragment.newInstance(this)).addToBackStack(null).commit();
     }
 
     @Override
@@ -58,17 +58,17 @@ public class MainActivity extends AppCompatActivity  implements LocationInterfac
 
     @Override
     public void returnFromService() {
-        locationFragment=new LocationFragment(this);
-        getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutMain,locationFragment).addToBackStack(null).commit();
+        //locationFragment=new LocationFragment(this);
+        getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,LocationFragment.newInstance(this)).addToBackStack(null).commit();
     }
 
     @Override
     public void onBackPressed() {
-        if (getSupportFragmentManager().getBackStackEntryCount() <=1) {
-            finish();
+        if (getFragmentManager().getBackStackEntryCount()<=1) {
             super.onBackPressed();
+            finish();
         } else {
-            getSupportFragmentManager().popBackStack();
+            getFragmentManager().popBackStack();
         }
     }
 
@@ -78,7 +78,7 @@ public class MainActivity extends AppCompatActivity  implements LocationInterfac
         if (requestCode == PLACE_PICKER_REQUEST) {
             if(resultCode==RESULT_OK) {
                 Place place = PlacePicker.getPlace(data, this);
-                locationFragment.setLocation(place);
+                LocationFragment.setLocation(place);
             }
         }
     }
