@@ -1,7 +1,6 @@
 <resources>
     <string name="app_name">FundooPay</string>
 
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="Set_your_location">Set your location</string>
     <string name="text_location">so that customers can find you \n easily</string>
@@ -9,6 +8,22 @@
     <string name="google_maps_api_key">AIzaSyDfo7T9WXvxVynWJsYPCLOoU5NXRl13SR8</string>
     <string name="title_activity_maps">Map</string>
     <string name="Avenir">Avenir</string>
+    <string name="next">Next</string>
+    <string name="accounts">Bank Accounts</string>
+    <string name="notifications">Notifications</string>
+    <string name="Settings">Settings</string>
+    <string name="logout">Log out</string>
+    <string name="spase">   </string>
+    <string name="notify_bill">   Rs.200 Paid by 13Brehja (John Deo)</string>
+    <string name="phone_new">  Please enter your country code and newphonenumber </string>
+    <string name="phone_details">Please enter your country code and old phonenumber   </string>
+    <string name="total">300</string>
+    <string name="customer">801 Sai Samarth Business Park, Deonar Road, Deonar,Mumbai, Maharashtra, 400088.</string>
+    <string name="splash_text">Easiest way to manage your \n daily expences</string>
+    <string name="verify">Verify</string>
+    <string name="otp">OTP</string>
+    <string name="validity_of_card">Validity of card</string>
+    <string name="set_upi_text">Last 6 digits of your debit card number</string>
     <string name="bauhaus_93">Bauhaus_93</string>
     <string name="phone_verification">We will send an SMS from your phone \n to verify if your phone number is \n registered with your bank account.</string>
     <string name="transition_title_image">transition</string>

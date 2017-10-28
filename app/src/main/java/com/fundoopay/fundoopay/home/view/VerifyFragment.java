@@ -1,6 +1,5 @@
 package com.fundoopay.fundoopay.home.view;
 
-import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
@@ -9,7 +8,6 @@ import android.support.v7.widget.AppCompatTextView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.DecelerateInterpolator;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 
@@ -22,12 +20,10 @@ public class VerifyFragment extends BaseFragment implements View.OnClickListener
     AppCompatTextView textViewVerify;
     RelativeLayout relativeLayoutOtp,relativeLayoutVerify;
     private long SPLASH_TIME_OUT=1000;
-    private Typeface avnir;
     private ProgressBar mprogressBar;
     private CircularProgressBar circularProgressBar;
 
     public VerifyFragment() {
-        // Required empty public constructor
     }
  public static VerifyFragment newInstance(String param1, String param2) {
         VerifyFragment fragment = new VerifyFragment();
@@ -51,7 +47,6 @@ public class VerifyFragment extends BaseFragment implements View.OnClickListener
         textViewVerify=view.findViewById(R.id.textViewVerify);
         relativeLayoutOtp=view.findViewById(R.id.relativeOtp);
         relativeLayoutVerify=view.findViewById(R.id.relativeVerify);
-        avnir= Typeface.createFromAsset(getContext().getAssets(),"avnir.ttf");
          circularProgressBar = (CircularProgressBar)view.findViewById(R.id.yourCircularProgressbar);
 
 

@@ -29,10 +29,16 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
     AppCompatTextView textViewLocateAddress;
     private StringBuilder stBuilder;
     AppCompatTextView textViewNext;
+    static LocationFragment fragment;
+    public LocationFragment() {
+    }
 
-    public LocationFragment(LocationInterface locationInterface) {
-        this.locationInterface=locationInterface;
-     }
+
+    public static LocationFragment newInstance(LocationInterface locationInterface) {
+         fragment = new LocationFragment();
+        fragment.locationInterface=locationInterface;
+        return fragment;
+    }
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
@@ -76,8 +82,8 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
                 }
                 break;
             case R.id.textViewNext:
-                MobileVerificationFragment verificationFragment=new MobileVerificationFragment(this);
-                getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutMain,verificationFragment).addToBackStack(null).commit();
+               // MobileVerificationFragment verificationFragment=new MobileVerificationFragment(this);
+                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,MobileVerificationFragment.newInstance(this)).addToBackStack(null).commit();
 
                 break;
             default:
@@ -85,8 +91,13 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
         }
     }
 
-    public void setLocation(Place place) {
-     this.mPlace =place;
+    public static void setLocation(Place place) {
+        fragment.setLocationText(place);
+          //  Toast.makeText(getContext(), "Address  :"+stBuilder.toString(), Toast.LENGTH_SHORT).show();
+    }
+
+    private void setLocationText(Place place) {
+        this.mPlace =place;
         textViewLocateAddress.setVisibility(View.GONE);
         editTextLocateAddress.setVisibility(View.VISIBLE);
         stBuilder = new StringBuilder();
@@ -106,6 +117,6 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
         stBuilder.append("Address: ");
         stBuilder.append(address);
         editTextLocateAddress.setText(stBuilder.toString());
-      //  Toast.makeText(getContext(), "Address  :"+stBuilder.toString(), Toast.LENGTH_SHORT).show();
+
     }
 }

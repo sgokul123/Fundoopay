@@ -7,7 +7,7 @@
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
-
+    <uses-feature android:name="android.hardware.camera"         android:required="true" />
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -35,7 +35,7 @@
             android:name=".bankdetail.view.BankDetailActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".dashboard.view.FundooPayActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar"/>
+           android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>

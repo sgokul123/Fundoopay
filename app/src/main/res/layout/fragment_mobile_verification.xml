@@ -14,10 +14,10 @@
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true"
         android:layout_height="wrap_content">
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:textSize="@dimen/dimen_30sp"
+            android:textSize="@dimen/dimen_18sp"
             android:textAlignment="center"
             android:textColor="@color/holo_white_dark"
             android:layout_marginBottom="@dimen/dimen_40dp"
@@ -40,12 +40,12 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical">
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/holo_white_dark"
                     android:text="SMS"/>
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/holo_white_dark"
@@ -59,7 +59,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="@dimen/dimen_50dp"
 
-            android:layout_marginTop="@dimen/dimen_10dp">
+            android:layout_marginTop="@dimen/dimen_30dp">
             <Switch
                 android:id="@+id/imageviewOnOffState"
                 android:layout_width="wrap_content"
@@ -73,13 +73,13 @@
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/imageviewOnOffState"
                 android:orientation="vertical">
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/holo_white_dark"
                     android:text="PHONE STATE"
                     />
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/holo_white_dark"
@@ -89,7 +89,7 @@
         </RelativeLayout>
     </LinearLayout>
 
-    <android.support.v7.widget.AppCompatTextView
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
         android:layout_alignParentBottom="true"
         android:id="@+id/mobileVerifyeNext"
         android:layout_width="wrap_content"

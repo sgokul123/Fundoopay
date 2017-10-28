@@ -30,21 +30,19 @@
                 android:layout_height="wrap_content"
                 >
 
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFB
                     android:id="@+id/textViewFundoo"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:fontFamily="@string/bauhaus_93"
                     android:text="fundoo"
                     android:textColor="@color/holo_white_dark"
                     android:textSize="@dimen/dimen_18sp"
                     android:textStyle="bold" />
 
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFB
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_toRightOf="@+id/textViewFundoo"
-                    android:fontFamily="@string/bauhaus_93"
                     android:text="Pay"
                     android:textColor="@color/holo_yellow_dark"
                     android:textSize="@dimen/dimen_18sp"

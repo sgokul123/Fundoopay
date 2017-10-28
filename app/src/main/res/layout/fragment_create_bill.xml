@@ -1,0 +1,113 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:clickable="false"
+    android:orientation="vertical"
+    tools:context="com.fundoopay.fundoopay.dashboard.view.CreateBillFragment">
+    <include layout="@layout/layout_toolbar_upi"
+      />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:scrollbars="none"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginRight="@dimen/dimen_20dp"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:orientation="vertical">
+
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:id="@+id/textViewName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="John Deo"
+            android:textColor="@color/holo_yellow_dark"
+            android:textSize="@dimen/dimen_30sp" />
+
+
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:id="@+id/textViewPhone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewName"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="992233445566"
+            android:textColor="@color/holo_blue_dark"
+            android:textSize="@dimen/dimen_25sp" />
+
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:id="@+id/textViewAddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/textViewPhone"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:text="@string/customer"
+            android:textColor="@color/holo_blue_dark"
+            android:textSize="@dimen/dimen_18sp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:textColor="@color/holo_blue_dark"
+                android:drawableRight="@drawable/ic_rupee_indian"
+                android:hint="Amount" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_height="wrap_content">
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/holo_blue_dark"
+                android:backgroundTint="@color/holo_blue_dark"
+                android:hint="Comment" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.v7.widget.AppCompatImageView
+            android:id="@+id/imageViewCamera"
+            android:layout_width="@dimen/dimen_100dp"
+            android:layout_height="@dimen/dimen_100dp"
+            android:layout_marginTop="@dimen/dimen_20dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/ic_action_camera" />
+
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:alpha="0.7"
+            android:text="Click to open camera"
+            android:textAlignment="center"
+            android:textColor="@color/holo_blue_dark" />
+
+        <android.support.v7.widget.AppCompatButton
+            android:id="@+id/buttonCreateBill"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/dimen_30dp"
+
+            android:layout_marginTop="@dimen/dimen_30dp"
+            android:background="@drawable/square"
+            android:text="Send Bill"
+            android:textColor="@color/holo_blue_dark" />
+    </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

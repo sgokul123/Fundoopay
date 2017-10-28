@@ -29,11 +29,11 @@ public class BankBalanceFragment extends BaseFragment {
     public BankBalanceFragment() {
         // Required empty public constructor
     }
-
+/*
     public BankBalanceFragment(SetUPIFragment setUPIFragment) {
-    }
+    }*/
 
-    public static BankBalanceFragment newInstance(String param1, String param2) {
+    public static BankBalanceFragment newInstance(SetUPIFragment setUPIFragment) {
         BankBalanceFragment fragment = new BankBalanceFragment();
         Bundle args = new Bundle();
         fragment.setArguments(args);
@@ -68,7 +68,7 @@ public class BankBalanceFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imageviewBack:
-                getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getFragmentManager().popBackStack();
                 break;
             case R.id.buttonBankBalance:
                 Intent intent = new Intent(getActivity(), FundooPayActivity.class);

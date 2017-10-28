@@ -45,8 +45,6 @@ public class SetUPIFragment extends BaseFragment {
     @BindView(R.id.textViewUpiPinNext)
     AppCompatTextView textViewUpiPinNext;
     Unbinder unbinder;
-    @BindView(R.id.textViewFundoo)
-    AppCompatTextView textViewFundoo;
     @BindView(R.id.layoutFundooPay)
     LinearLayout layoutFundooPay;
     @BindView(R.id.toolbar_update)
@@ -70,20 +68,16 @@ public class SetUPIFragment extends BaseFragment {
     @BindView(R.id.imageviewBack)
     AppCompatImageView imageviewBack;
 
-    public SetUPIFragment(Context mContext) {
-        // Required empty public constructor
-    }
+
 
     public SetUPIFragment() {
         super();
     }
 
 
-    public static SetUPIFragment newInstance(String param1, String param2) {
+    public static SetUPIFragment newInstance(Context mContext) {
         SetUPIFragment fragment = new SetUPIFragment();
-        Bundle args = new Bundle();
 
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -119,17 +113,17 @@ public class SetUPIFragment extends BaseFragment {
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.imageviewBack:
-                getActivity().getSupportFragmentManager().popBackStackImmediate();
+                getActivity().getFragmentManager().popBackStackImmediate();
                 break;
             case R.id.textViewUpiPinNext:
                 if(textViewUpiPinNext.getText().toString().equals("SET")){
-                    BankBalanceFragment balanceFragment=new BankBalanceFragment(this);
+                    //BankBalanceFragment balanceFragment=new BankBalanceFragment(this);
                     textViewUpiPinNext.setText("Next");
                     linearLayoutUpiPin2.setVisibility(View.GONE);
                     linearLayoutUpiPin1.setVisibility(View.VISIBLE);
                     relativeUpiPin.setBackgroundColor(getResources().getColor(R.color.holo_white));
                     textViewUpiPinNext.setTextColor(getResources().getColor(R.color.holo_blue_dark));
-                    getActivity().getSupportFragmentManager().beginTransaction().replace(R.id.framlayoutBank,balanceFragment).addToBackStack(null).commit();
+                    getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutBank,BankBalanceFragment.newInstance(this)).addToBackStack(null).commit();
                 }else {
                     textViewUpiPinNext.setText("SET");
                     linearLayoutUpiPin2.setVisibility(View.VISIBLE);

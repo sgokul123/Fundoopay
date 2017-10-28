@@ -12,6 +12,7 @@
     <ScrollView
         android:layout_width="match_parent"
         android:layout_below="@+id/toolbarBank"
+        android:scrollbars="none"
         android:layout_height="match_parent">
     <RelativeLayout
         android:layout_width="match_parent"
@@ -48,21 +49,21 @@
                 android:layout_marginLeft="@dimen/dimen_10dp"
                 android:layout_marginTop="@dimen/dimen_20dp"
                 android:layout_height="wrap_content">
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:id="@+id/textViewCardNumber"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:textColor="@color/holo_blue_dark"
                     android:textSize="@dimen/dimen_18sp"
                     android:text="xxxxxxxx4251"/>
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:id="@+id/textViewAccountType"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:textColor="@color/holo_blue_dark"
                     android:textSize="@dimen/dimen_18sp"
                     android:text="Saving"/>
-                <android.support.v7.widget.AppCompatTextView
+                <com.fundoopay.fundoopay.custom.CustomTextViewFA
                     android:id="@+id/textViewIFSC"
                     android:layout_width="wrap_content"
                     android:textSize="@dimen/dimen_18sp"
@@ -75,7 +76,7 @@
         </LinearLayout>
 
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:id="@+id/textViewSetUpiPin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -83,7 +84,7 @@
             android:layout_marginTop="@dimen/dimen_20dp"
             android:textColor="@color/holo_blue_dark"
             android:text="CHANGE UPI PIN"/>
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:id="@+id/textViewResetUpiPin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -91,7 +92,7 @@
             android:layout_marginTop="@dimen/dimen_20dp"
             android:textColor="@color/holo_blue_dark"
             android:text="RESET UPI PIN"/>
-
+//      061720028734    6441
         <View
             android:id="@+id/viewPin"
             android:layout_width="match_parent"
@@ -100,7 +101,7 @@
             android:alpha="0.8"
             android:layout_marginTop="@dimen/dimen_50dp"
             android:layout_height="1dp"/>
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:id="@+id/textViewBalance"
             android:layout_width="match_parent"
             android:layout_marginTop="@dimen/dimen_30dp"
@@ -118,6 +119,7 @@
             android:layout_marginTop="@dimen/dimen_30dp"
             android:layout_marginLeft="@dimen/dimen_10dp"
             android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_marginBottom="@dimen/dimen_30dp"
             android:background="@drawable/square"
             android:textColor="@color/holo_blue_dark"
             android:layout_below="@+id/textViewBalance"

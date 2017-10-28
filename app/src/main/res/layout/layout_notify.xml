@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:id="@+id/linearViewNotify"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:weightSum="1"
+        android:layout_height="wrap_content">
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/dimen_18sp"
+            android:layout_weight="0.08"
+            android:layout_marginLeft="@dimen/dimen_10dp"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:textColor="@color/holo_blue_dark"
+            android:text="@string/notify_bill"/>
+        <RadioButton
+            android:id="@+id/radioChake"
+            android:layout_width="match_parent"
+            android:layout_weight="0.9"
+            android:visibility="gone"
+            android:layout_marginTop="@dimen/dimen_10dp"
+            android:layout_marginRight="@dimen/dimen_10dp"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:layout_height="wrap_content">
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:alpha="0.4"
+            android:textColor="@color/holo_blue_dark"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:layout_height="wrap_content"
+            android:text="17:06"/>
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/holo_blue_dark"
+            android:layout_toLeftOf="@+id/textViewTime"
+            android:alpha="0.4"
+            android:layout_marginRight="@dimen/dimen_20dp"
+            android:text="23rd July’17"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="@color/holo_yellow_dark"
+        android:layout_marginTop="@dimen/dimen_10dp"
+        android:alpha="0.5"
+        android:layout_marginBottom="@dimen/dimen_10dp"
+        android:layout_height="1dp"/>
+
+</LinearLayout>

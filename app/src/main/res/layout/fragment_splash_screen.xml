@@ -24,22 +24,20 @@
             android:layout_centerHorizontal="true"
             android:layout_marginTop="@dimen/dimen_50dp">
 
-            <android.support.v7.widget.AppCompatTextView
+            <com.fundoopay.fundoopay.custom.CustomTextViewFB
                 android:id="@+id/textViewFundoo"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:fontFamily="@string/bauhaus_93"
                 android:text="fundoo"
                 android:textColor="@color/holo_white_dark"
                 android:textSize="@dimen/dimen_30sp"
                 android:textStyle="bold" />
 
-            <android.support.v7.widget.AppCompatTextView
+            <com.fundoopay.fundoopay.custom.CustomTextViewFB
                 android:id="@+id/textViewPay"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_toRightOf="@+id/textViewFundoo"
-                android:fontFamily="@string/bauhaus_93"
                 android:text="Pay"
                 android:textColor="@color/holo_yellow_dark"
                 android:textSize="@dimen/dimen_30sp"
@@ -47,14 +45,14 @@
 
         </RelativeLayout>
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFA
             android:id="@+id/textViewSplash"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
             android:layout_marginBottom="@dimen/dimen_50dp"
-            android:text="Easiest way to manage your \n daily expences"
+            android:text="@string/splash_text"
             android:textAlignment="center"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp" />

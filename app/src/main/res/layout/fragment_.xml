@@ -3,108 +3,117 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundoopayimage"
     tools:context=".home.view.ServiceFragment">
-
-    <android.support.v7.widget.AppCompatImageView
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:scaleType="fitXY"
-        app:srcCompat="@drawable/fundoopayimage" />
+        android:layout_above="@+id/serviceNext"
+        android:scrollbars="none"
+        android:layout_marginBottom="@dimen/dimen_20dp"
+        android:layout_height="match_parent">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_height="match_parent">
+
     <RelativeLayout
         android:id="@+id/layoutFundooPay"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/linearLayoutService"
+        android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="@dimen/dimen_50dp">
+        android:layout_marginTop="67dp">
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFB
             android:id="@+id/textFundoo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:fontFamily="@string/bauhaus_93"
+            android:layout_marginBottom="23dp"
             android:text="fundoo"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_30sp"
             android:textStyle="bold" />
 
-        <android.support.v7.widget.AppCompatTextView
+        <com.fundoopay.fundoopay.custom.CustomTextViewFB
             android:id="@+id/textPay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_toRightOf="@+id/textFundoo"
-            android:fontFamily="@string/bauhaus_93"
             android:text="Pay"
             android:textColor="@color/holo_yellow_dark"
             android:textSize="@dimen/dimen_30sp"
             android:textStyle="bold" />
 
     </RelativeLayout>
+
     <LinearLayout
         android:id="@+id/linearLayoutService"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/layoutFundooPay"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/dimen_20dp"
+        android:layout_marginTop="45dp"
         android:layout_marginRight="@dimen/dimen_20dp"
-        android:layout_above="@+id/serviceNext"
-        android:layout_marginBottom="@dimen/dimen_20dp"
-        android:layout_centerVertical="true"
+        android:layout_marginLeft="@dimen/dimen_20dp"
         android:orientation="vertical">
+
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
-            android:background="@android:color/black"
-            android:alpha="0.5"
+            android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_20dp"
-            android:layout_height="wrap_content">
+            android:alpha="0.5"
+            android:background="@android:color/black">
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextUName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:fontFamily="@string/Avenir"
-                android:textColor="@color/holo_white_dark"
-                android:hint="Username"/>
+                android:hint="Username"
+                android:textColor="@color/holo_white_dark" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_20dp"
-            android:background="@android:color/black"
-            android:alpha="0.5">
+            android:alpha="0.5"
+            android:background="@android:color/black">
 
             <android.support.v7.widget.AppCompatEditText
                 android:id="@+id/editTextShopName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textColor="@color/holo_white_dark"
-                android:hint="Shop Name"/>
+                android:hint="Shop Name"
+                android:textColor="@color/holo_white_dark" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.design.widget.TextInputLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_20dp"
-            android:background="@android:color/black"
-            android:alpha="0.5">
+            android:alpha="0.5"
+            android:background="@android:color/black">
 
-        <Spinner
-            android:id="@+id/spinner1"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dimen_50dp">
+            <Spinner
+                android:id="@+id/spinner1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dimen_50dp">
 
 
-        </Spinner>
+            </Spinner>
         </android.support.design.widget.TextInputLayout>
->
+        >
     </LinearLayout>
-    <android.support.v7.widget.AppCompatTextView
+    </LinearLayout>
+    </ScrollView>
+    <com.fundoopay.fundoopay.custom.CustomTextViewFA
         android:id="@+id/serviceNext"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
         android:layout_marginBottom="@dimen/dimen_30dp"
         android:fontFamily="@string/Avenir"
         android:text="Next"
@@ -112,11 +121,13 @@
         android:textColor="@color/holo_white_dark"
         android:textSize="@dimen/dimen_14sp"
         android:textStyle="bold" />
+
     <android.support.v7.widget.AppCompatImageView
-        android:layout_toRightOf="@+id/serviceNext"
         android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="@dimen/dimen_21dp"
-        android:layout_height="wrap_content"
-        app:srcCompat="@drawable/ic_action_next"/>
+        android:layout_toRightOf="@+id/serviceNext"
+        app:srcCompat="@drawable/ic_action_next"
+        android:id="@+id/appCompatImageView" />
 </RelativeLayout>

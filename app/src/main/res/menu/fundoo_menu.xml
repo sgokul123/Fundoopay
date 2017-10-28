@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".dashboard.view.FundooPayActivity">
+
+    <item android:id="@+id/search"
+        app:showAsAction="always"
+            android:icon="@android:drawable/ic_menu_search"
+        android:title="@string/accounts"/>
+    <item android:id="@+id/account"
+        app:showAsAction="never"
+        android:title="@string/accounts"/>
+    <item
+        android:id="@+id/notify"
+        app:showAsAction="never"
+        android:title="@string/notifications"/>
+    <item
+        android:id="@+id/setting"
+        app:showAsAction="never"
+        android:title="@string/Settings">
+    </item>
+    <item
+        android:id="@+id/exit"
+        app:showAsAction="never"
+        android:title="@string/logout"
+        >
+    </item>
+</menu>
