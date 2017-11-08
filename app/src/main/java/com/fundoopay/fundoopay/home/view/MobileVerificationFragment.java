@@ -17,13 +17,13 @@ public class MobileVerificationFragment extends BaseFragment implements View.OnC
     Switch imageViewOnOffSms;
     Switch imageViewOnOffState;
     AppCompatTextView textViewNext;
-    LocationFragment locationFragment;
+    MainActivity mainActivity;
     public MobileVerificationFragment() {
     }
 
-    public static MobileVerificationFragment newInstance(LocationFragment locationFragment) {
+    public static MobileVerificationFragment newInstance(MainActivity mainActivity) {
         MobileVerificationFragment fragment = new MobileVerificationFragment();
-        fragment.locationFragment=locationFragment;
+        fragment.mainActivity=mainActivity;
         return fragment;
     }
 
@@ -64,9 +64,8 @@ public class MobileVerificationFragment extends BaseFragment implements View.OnC
 
                 break;
             case R.id.mobileVerifyeNext:
-                OtpSendFragment otpSendFragment=new OtpSendFragment();
-                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,otpSendFragment).addToBackStack(null).commit();
-                break;
+                mainActivity.returnFromMobileVerify();
+                  break;
             default:
                 break;
         }

@@ -15,13 +15,13 @@ import com.fundoopay.fundoopay.base.BaseFragment;
 public class SplashScreenFragment extends BaseFragment {
     AppCompatTextView textViewFundoo,textViewPay,textViewSDisc;
     private static long SPLASH_TIME_OUT=5000;
-    LocationInterface locationInterface;
+    MainActivity locationInterface;
     public SplashScreenFragment() {
 
     }
 
 
-    public static SplashScreenFragment newInstance(LocationInterface locationInterface) {
+    public static SplashScreenFragment newInstance(MainActivity locationInterface) {
         SplashScreenFragment fragment = new SplashScreenFragment();
         fragment.locationInterface=locationInterface;
 
@@ -37,6 +37,7 @@ public class SplashScreenFragment extends BaseFragment {
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
+
                 locationInterface.returnFromSplashScren();
             }
         }, SPLASH_TIME_OUT);

@@ -22,13 +22,12 @@ public class VerifyFragment extends BaseFragment implements View.OnClickListener
     private long SPLASH_TIME_OUT=1000;
     private ProgressBar mprogressBar;
     private CircularProgressBar circularProgressBar;
-
+    MainActivity mainActivity;
     public VerifyFragment() {
     }
- public static VerifyFragment newInstance(String param1, String param2) {
+ public static VerifyFragment newInstance(MainActivity mainActivity) {
         VerifyFragment fragment = new VerifyFragment();
-        Bundle args = new Bundle();
-       fragment.setArguments(args);
+     fragment.mainActivity=mainActivity;
         return fragment;
     }
 
@@ -71,8 +70,8 @@ public class VerifyFragment extends BaseFragment implements View.OnClickListener
                 new Handler().postDelayed(new Runnable() {
                     @Override
                     public void run() {
-                        Intent intent=new Intent(getActivity(), BankDetailActivity.class);
-                        startActivity(intent);
+                        mainActivity.returnFromVerify();
+
 
                     }
                 }, SPLASH_TIME_OUT);

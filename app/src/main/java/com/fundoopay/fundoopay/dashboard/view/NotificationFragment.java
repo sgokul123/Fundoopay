@@ -20,8 +20,6 @@ import butterknife.OnClick;
 import butterknife.Unbinder;
 
 public class NotificationFragment extends BaseFragment {
-
-
     private static Context mContext;
     @BindView(R.id.recyclerViewNotification)
     RecyclerView recyclerViewNotification;
@@ -38,11 +36,6 @@ public class NotificationFragment extends BaseFragment {
     public NotificationFragment() {
 
     }
-
-   /* public NotificationFragment(FundooPayActivity fundooPayActivity) {
-        this.fundooPayActivity=fundooPayActivity;
-    }*/
-
 
     public static NotificationFragment newInstance(FundooPayActivity fundooPayActivity) {
         NotificationFragment fragment = new NotificationFragment();

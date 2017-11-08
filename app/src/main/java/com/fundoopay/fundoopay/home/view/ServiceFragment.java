@@ -17,7 +17,7 @@ import com.fundoopay.fundoopay.base.BaseFragment;
 public class ServiceFragment extends BaseFragment implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     AppCompatTextView textViewNext,textViewFundoo,textViewPay;
     Spinner spin;
-    LocationInterface locationInterface;
+    MainActivity locationInterface;
     AppCompatEditText editTextUName,editTextShopName;
 
     String[] country = { "India", "USA", "China", "Japan", "Other", };
@@ -30,7 +30,7 @@ public class ServiceFragment extends BaseFragment implements View.OnClickListene
         this.locationInterface=locationInterface;
     }*/
 
-    public static ServiceFragment newInstance(LocationInterface locationInterface) {
+    public static ServiceFragment newInstance(MainActivity locationInterface) {
         ServiceFragment fragment = new ServiceFragment();
         fragment.locationInterface=locationInterface;
         return fragment;

@@ -23,17 +23,16 @@ import java.util.List;
 public class OtpSendFragment extends BaseFragment implements View.OnClickListener {
     AppCompatButton simCardFirst, simCardSecound;
     AppCompatTextView verifyMobileNext;
-
+    MainActivity mainActivity;
     public OtpSendFragment() {
     }
 
 
     // TODO: Rename and change types and number of parameters
-    public static OtpSendFragment newInstance(String param1, String param2) {
+    public static OtpSendFragment newInstance(MainActivity mainActivity) {
         OtpSendFragment fragment = new OtpSendFragment();
-        Bundle args = new Bundle();
+        fragment.mainActivity=mainActivity;
 
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -83,9 +82,8 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 getsimDetails();
                 break;
             case  R.id.verifyMobileNext:
-                VerifyFragment verifyFragment=new VerifyFragment();
-                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,verifyFragment).addToBackStack(null).commit();
-                break;
+                mainActivity.returnFromOtp();
+                 break;
         }
     }
     public void getsimDetails(){
@@ -106,7 +104,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                             break;
                     }
                 }
-                Toast.makeText(getActivity(), "Sim  Number  :"+simTwoNumber+"   SirealNumber : "+simOneNumber, Toast.LENGTH_SHORT).show();
+               // Toast.makeText(getActivity(), "Sim  Number  :"+simTwoNumber+"   SirealNumber : "+simOneNumber, Toast.LENGTH_SHORT).show();
 
             }
         } catch (Exception e) {
