@@ -34,10 +34,9 @@ dependencies {
 
     compile 'com.android.support.constraint:constraint-la' +
             'yout:1.0.2'
+    compile 'com.mcxiaoke.volley:library-aar:1.0.0'
 
-
-
-
+    compile 'com.google.code.gson:gson:2.6.2'
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support:design:23.1.1'
     compile 'com.android.support:support-v4:26.+'

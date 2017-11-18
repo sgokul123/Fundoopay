@@ -27,6 +27,7 @@
         android:layout_below="@+id/textViewOTP"
         android:orientation="horizontal">
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextOtp1"
             android:layout_width="@dimen/dimen_30dp"
             android:textSize="@dimen/dimen_18sp"
             android:layout_marginLeft="@dimen/dimen_20dp"
@@ -37,6 +38,7 @@
             android:textColor="@color/holo_white_dark"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextOtp2"
             android:layout_width="@dimen/dimen_30dp"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp"
@@ -47,6 +49,7 @@
             android:backgroundTint="@color/holo_white"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextOtp3"
             android:layout_width="@dimen/dimen_30dp"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp"
@@ -57,6 +60,7 @@
             android:layout_marginLeft="@dimen/dimen_20dp"
             android:layout_height="wrap_content" />
         <android.support.v7.widget.AppCompatEditText
+            android:id="@+id/editTextOtp4"
             android:layout_width="@dimen/dimen_30dp"
             android:textColor="@color/holo_white_dark"
             android:textSize="@dimen/dimen_18sp"

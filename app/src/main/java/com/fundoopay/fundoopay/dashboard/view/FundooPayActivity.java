@@ -27,10 +27,10 @@ import butterknife.OnClick;
 
 public class FundooPayActivity extends BaseActivity {
 
-    @BindView(R.id.appCompatButton1)
+   /* @BindView(R.id.appCompatButton1)
     AppCompatButton appCompatButton1;
     @BindView(R.id.appCompatButton2)
-    AppCompatButton appCompatButton2;
+    AppCompatButton appCompatButton2;*/
     @BindView(R.id.recyclerViewDashBoard)
     RecyclerView recyclerViewDashBoard;
     @BindView(R.id.toolbar_update)
@@ -143,15 +143,15 @@ public class FundooPayActivity extends BaseActivity {
     }
 
 
-    @OnClick({R.id.appCompatButton1, R.id.appCompatButton2, R.id.floatingButtonMenuAdd, R.id.floatingButtonMenuSave, R.id.floatingButtonMenu,R.id.buttonOutstandingPaid, R.id.buttonOutstandingUnPaid})
+   /* @OnClick({R.id.appCompatButton1, R.id.appCompatButton2, R.id.floatingButtonMenuAdd, R.id.floatingButtonMenuSave, R.id.floatingButtonMenu,R.id.buttonOutstandingPaid, R.id.buttonOutstandingUnPaid})
     public void onViewClicked(View view) {
         switch (view.getId()) {
             case R.id.appCompatButton1:
                 if(mTabClicked==2){
                     getPopUpFragment();
-                    appCompatButton1.setBackgroundDrawable(getDrawable(R.drawable.tab_left_layout));
+                *//*    appCompatButton1.setBackgroundDrawable(getDrawable(R.drawable.tab_left_layout));
                     appCompatButton2.setBackgroundDrawable(getDrawable(R.drawable.tab_right_layout));
-                    layoutMenu.setVisibility(View.GONE);
+                 *//*   layoutMenu.setVisibility(View.GONE);
                     if(linearLayoutOutStanding.getVisibility()==View.VISIBLE){
                         linearLayoutOutStanding.setVisibility(View.GONE);
                     }
@@ -161,9 +161,9 @@ public class FundooPayActivity extends BaseActivity {
             case R.id.appCompatButton2:
                 if(mTabClicked==1){
                     getPopUpFragment();
-                    appCompatButton1.setBackgroundDrawable(getDrawable(R.drawable.tab_layout_secound));
+                 *//*   appCompatButton1.setBackgroundDrawable(getDrawable(R.drawable.tab_layout_secound));
                     appCompatButton2.setBackgroundDrawable(getDrawable(R.drawable.tab_layout_one));
-                    layoutMenu.setVisibility(View.VISIBLE);
+                 *//*   layoutMenu.setVisibility(View.VISIBLE);
                 }
                 mTabClicked=2;
 
@@ -186,7 +186,7 @@ public class FundooPayActivity extends BaseActivity {
 
                 break;
         }
-    }
+    }*/
 
     private void getPopUpFragment() {
         if (getFragmentManager().getBackStackEntryCount() == 1) {

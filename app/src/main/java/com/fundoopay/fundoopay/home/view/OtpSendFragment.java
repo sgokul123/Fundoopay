@@ -50,7 +50,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
         simCardFirst = view.findViewById(R.id.simCardFirst);
         simCardSecound = view.findViewById(R.id.simCardSecound);
         verifyMobileNext=view.findViewById(R.id.verifyMobileNext);
-
+        getsimDetails();
     }
 
     @Override
@@ -79,7 +79,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 simCardSecound.setTextColor(getResources().getColor(R.color.holo_blue_dark));
                 simCardFirst.setTextColor(getResources().getColor(R.color.holo_white_dark));
                 simCardFirst.setBackgroundDrawable(getActivity().getDrawable(R.drawable.square_diagonal));
-                getsimDetails();
+
                 break;
             case  R.id.verifyMobileNext:
                 mainActivity.returnFromOtp();
@@ -88,7 +88,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
     }
     public void getsimDetails(){
         try {
-            String simTwoNumber = null, simOneNumber = null;
+            String simTwoNumber = "     Sim 1\n ", simOneNumber = "Sim 2      \n";
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
                 SubscriptionManager subManager = (SubscriptionManager) getActivity().getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
                 List<SubscriptionInfo> subInfoList = null;
@@ -96,15 +96,15 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 if (subInfoList != null && subInfoList.size() > 0) {
                     switch (subInfoList.size()) {
                         case 2:
-                            simTwoNumber = subInfoList.get(1).getNumber();
+                            simTwoNumber = "   "+(String) subInfoList.get(1).getCarrierName();
                         case 1:
-                            simOneNumber = subInfoList.get(0).getNumber();
+                            simOneNumber = (String) subInfoList.get(0).getDisplayName();
                             break;
                         default:
                             break;
                     }
                 }
-               // Toast.makeText(getActivity(), "Sim  Number  :"+simTwoNumber+"   SirealNumber : "+simOneNumber, Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "Sim  Number  :"+simTwoNumber+"   SirealNumber : "+simOneNumber, Toast.LENGTH_SHORT).show();
 
             }
         } catch (Exception e) {

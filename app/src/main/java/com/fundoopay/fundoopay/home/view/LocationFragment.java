@@ -11,15 +11,25 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import com.fundoopay.fundoopay.R;
 import com.fundoopay.fundoopay.base.BaseFragment;
+import com.fundoopay.fundoopay.custom.MultiSpinner;
+import com.fundoopay.fundoopay.home.model.NearBySociety;
 import com.google.android.gms.common.GooglePlayServicesNotAvailableException;
 import com.google.android.gms.common.GooglePlayServicesRepairableException;
 import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.android.gms.location.places.Place;
 import com.google.android.gms.location.places.Places;
 import com.google.android.gms.location.places.ui.PlacePicker;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.List;
+import java.util.Set;
 
 import static android.content.ContentValues.TAG;
 
@@ -28,17 +38,23 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
     AppCompatImageView imageViewMap;
     MainActivity locationInterface;
     Place mPlace;
+    int selectedItem;
     AppCompatEditText editTextLocateAddress;
     AppCompatTextView textViewLocateAddress;
     private StringBuilder stBuilder;
     AppCompatTextView textViewNext;
+
+    static ArrayList<String> nearByLocation;
     static LocationFragment fragment;
+
     public LocationFragment() {
     }
 
 
     public static LocationFragment newInstance(MainActivity locationInterface) {
-         fragment = new LocationFragment();
+        if(fragment==null) {
+            fragment = new LocationFragment();
+        }
         fragment.locationInterface=locationInterface;
         return fragment;
     }
@@ -63,6 +79,11 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
         editTextLocateAddress=view.findViewById(R.id.editTextLocateMe);
         textViewLocateAddress=view.findViewById(R.id.textViweLocateMe);
         textViewNext=view.findViewById(R.id.textViewNext);
+
+        if(nearByLocation==null){
+            nearByLocation=new ArrayList<>();
+        }
+
     }
 
     @Override
@@ -85,9 +106,7 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
                 }
                 break;
             case R.id.textViewNext:
-               // MobileVerificationFragment verificationFragment=new MobileVerificationFragment(this);
-                //getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,MobileVerificationFragment.newInstance(this)).addToBackStack(null).commit();
-                locationInterface.returnFromLocation();
+                locationInterface.returnFromLocation(mPlace);
                 break;
             default:
                 break;
@@ -96,8 +115,7 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
 
     public static void setLocation(Place place) {
         fragment.setLocationText(place);
-          //  Toast.makeText(getContext(), "Address  :"+stBuilder.toString(), Toast.LENGTH_SHORT).show();
-    }
+   }
 
     private void setLocationText(Place place) {
         this.mPlace =place;
@@ -122,6 +140,8 @@ public class LocationFragment extends BaseFragment implements View.OnClickListen
         stBuilder.append("Address: ");
         stBuilder.append(address);
         editTextLocateAddress.setText(stBuilder.toString());
-
     }
+
+
+
 }
