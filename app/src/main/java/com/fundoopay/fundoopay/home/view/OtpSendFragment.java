@@ -23,17 +23,16 @@ import java.util.List;
 public class OtpSendFragment extends BaseFragment implements View.OnClickListener {
     AppCompatButton simCardFirst, simCardSecound;
     AppCompatTextView verifyMobileNext;
-
+    MainActivity mainActivity;
     public OtpSendFragment() {
     }
 
 
     // TODO: Rename and change types and number of parameters
-    public static OtpSendFragment newInstance(String param1, String param2) {
+    public static OtpSendFragment newInstance(MainActivity mainActivity) {
         OtpSendFragment fragment = new OtpSendFragment();
-        Bundle args = new Bundle();
+        fragment.mainActivity=mainActivity;
 
-        fragment.setArguments(args);
         return fragment;
     }
 
@@ -51,7 +50,7 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
         simCardFirst = view.findViewById(R.id.simCardFirst);
         simCardSecound = view.findViewById(R.id.simCardSecound);
         verifyMobileNext=view.findViewById(R.id.verifyMobileNext);
-
+        getsimDetails();
     }
 
     @Override
@@ -80,17 +79,16 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 simCardSecound.setTextColor(getResources().getColor(R.color.holo_blue_dark));
                 simCardFirst.setTextColor(getResources().getColor(R.color.holo_white_dark));
                 simCardFirst.setBackgroundDrawable(getActivity().getDrawable(R.drawable.square_diagonal));
-                getsimDetails();
+
                 break;
             case  R.id.verifyMobileNext:
-                VerifyFragment verifyFragment=new VerifyFragment();
-                getActivity().getFragmentManager().beginTransaction().replace(R.id.framlayoutMain,verifyFragment).addToBackStack(null).commit();
-                break;
+                mainActivity.returnFromOtp();
+                 break;
         }
     }
     public void getsimDetails(){
         try {
-            String simTwoNumber = null, simOneNumber = null;
+            String simTwoNumber = "     Sim 1\n ", simOneNumber = "Sim 2      \n";
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP_MR1) {
                 SubscriptionManager subManager = (SubscriptionManager) getActivity().getSystemService(Context.TELEPHONY_SUBSCRIPTION_SERVICE);
                 List<SubscriptionInfo> subInfoList = null;
@@ -98,9 +96,9 @@ public class OtpSendFragment extends BaseFragment implements View.OnClickListene
                 if (subInfoList != null && subInfoList.size() > 0) {
                     switch (subInfoList.size()) {
                         case 2:
-                            simTwoNumber = subInfoList.get(1).getNumber();
+                            simTwoNumber = "   "+(String) subInfoList.get(1).getCarrierName();
                         case 1:
-                            simOneNumber = subInfoList.get(0).getNumber();
+                            simOneNumber = (String) subInfoList.get(0).getDisplayName();
                             break;
                         default:
                             break;

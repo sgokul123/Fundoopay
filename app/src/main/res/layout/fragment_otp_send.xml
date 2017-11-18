@@ -35,19 +35,17 @@
             android:layout_width="wrap_content"
             android:layout_marginTop="@dimen/dimen_30dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:layout_below="@+id/textViewVerifySms"
             android:padding="@dimen/dimen_2dp"
             android:layout_centerHorizontal="true"
             android:background="@color/holo_white_dark"
-            android:orientation="horizontal">
+           >
 
             <android.support.v7.widget.AppCompatButton
                 android:id="@+id/simCardFirst"
                 style="?android:attr/borderlessButtonStyle"
                 android:layout_width="@dimen/dimen_100dp"
                 android:layout_height="wrap_content"
-                android:layout_weight="0.5"
                 android:background="@android:color/transparent"
                 android:text="     Sim 1"
                 android:textAlignment="textStart"
@@ -59,7 +57,6 @@
                 android:layout_width="@dimen/dimen_100dp"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="60dp"
-                android:layout_weight="0.5"
                 android:background="@drawable/left_diagonal_square"
                 android:text="Sim 2      "
                 android:textAlignment="textEnd"

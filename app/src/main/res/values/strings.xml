@@ -5,7 +5,7 @@
     <string name="Set_your_location">Set your location</string>
     <string name="text_location">so that customers can find you \n easily</string>
     <string name="locate_me">Locate Me</string>
-    <string name="google_maps_api_key">AIzaSyDfo7T9WXvxVynWJsYPCLOoU5NXRl13SR8</string>
+    <string name="google_maps_api_key">AIzaSyAy5U1IujhcNgIjz92EjWZQuArmNvahcmI</string>
     <string name="title_activity_maps">Map</string>
     <string name="Avenir">Avenir</string>
     <string name="next">Next</string>
@@ -27,4 +27,5 @@
     <string name="bauhaus_93">Bauhaus_93</string>
     <string name="phone_verification">We will send an SMS from your phone \n to verify if your phone number is \n registered with your bank account.</string>
     <string name="transition_title_image">transition</string>
+    <string name="for_all">select one</string>
 </resources>

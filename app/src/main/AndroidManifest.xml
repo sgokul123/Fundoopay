@@ -1,14 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.fundoopay.fundoopay">
-
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.SEND_SMS"/>
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-    <uses-permission android:name="android.Manifest.permission.READ_PHONE_STATE" />
-    <uses-feature android:name="android.hardware.camera"         android:required="true" />
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true"      />
     <application
+        android:name=".location.app.AppController"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -20,22 +22,32 @@
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="AIzaSyAudabhObn18srVvjLrB6T6tog6rk3GufQ" />
-
+            android:value="@string/google_maps_key" />
+       <!-- <activity
+            android:name=".home.view.MainActivity"/>
         <activity
-            android:name=".home.view.MainActivity"
-            android:theme="@style/Theme.AppCompat.NoActionBar">
+            android:name=".location.MapsActivity"
+            >
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
-        </activity>
+        </activity>-->
+         <activity
+             android:name=".home.view.MainActivity"
+             android:theme="@style/Theme.AppCompat.NoActionBar">
+             <intent-filter>
+                 <action android:name="android.intent.action.MAIN" />
+
+                 <category android:name="android.intent.category.LAUNCHER" />
+             </intent-filter>
+         </activity>
+
         <activity
             android:name=".bankdetail.view.BankDetailActivity"
             android:theme="@style/Theme.AppCompat.NoActionBar" />
         <activity android:name=".dashboard.view.FundooPayActivity"
-           android:theme="@style/Theme.AppCompat.NoActionBar"/>
+            android:theme="@style/Theme.AppCompat.NoActionBar"/>
     </application>
 
 </manifest>
